@@ -79,7 +79,9 @@ RUN mkdir -p ${CONDA_DIR}/envs/env_snap/notebooks
 COPY ./notebooks/*.ipynb ${CONDA_DIR}/envs/env_snap/notebooks
 
 # SNAP installation dir (final location tbd)
-ENV SNAP_INSTALL_DIR=/data/software/snap12_rc/esa-snap
+# e.g. /data/software/snap12_rc/esa-snap
+# --> docker build --build-arg SNAP_INSTALL_DIR=/data/software/snap12_rc/esa-snap ...
+ARG SNAP_INSTALL_DIR
 
 # copy required files from SNAP installation dir to Docker image (${CONDA_DIR}/envs/env_snap):
 
@@ -103,5 +105,13 @@ COPY ${SNAP_INSTALL_DIR}/rstb/ ${SNAP_DEST}/rstb/
 COPY ${SNAP_INSTALL_DIR}/snap/ ${SNAP_DEST}/snap/
 #COPY ${SNAP_INSTALL_DIR}/microwavetbx/ ${DEST}/microwavetbx/
 #COPY ${SNAP_INSTALL_DIR}/opttbx/ ${DEST}/opttbx/
+
+# Python installation dir
+# e.g. /data/software/miniconda3_py310
+# --> docker build --build-arg SNAP_INSTALL_DIR=/data/software/snap12_rc/esa-snap PYTHON_INSTALL_DIR=/data/software/miniconda3_py310...
+ARG PYTHON_INSTALL_DIR
+
+# copy required files from Python installation dir to Docker image...
+# copy snappy.properties file from .snap dir to Docker image...
 
 WORKDIR ${HOME}
