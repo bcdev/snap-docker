@@ -93,7 +93,8 @@ RUN mkdir -p ${SNAP_DEST}/etc \
     ${SNAP_DEST}/rstb \
     ${SNAP_DEST}/snap \
     ${SNAP_DEST}/microwavetbx \
-    ${SNAP_DEST}/opttbx/
+    ${SNAP_DEST}/opttbx/ \
+    ${HOME}\.snap\snap-python
 
 COPY ${SNAP_INSTALL_DIR}/LICENSE.html ${SNAP_DEST}/LICENSE.html
 COPY ${SNAP_INSTALL_DIR}/THIRDPARTY_LICENSES.txt ${SNAP_DEST}/THIRDPARTY_LICENSES.TXT
@@ -109,9 +110,13 @@ COPY ${SNAP_INSTALL_DIR}/snap/ ${SNAP_DEST}/snap/
 # Python installation dir
 # e.g. /data/software/miniconda3_py310
 # --> docker build --build-arg SNAP_INSTALL_DIR=/data/software/snap12_rc/esa-snap PYTHON_INSTALL_DIR=/data/software/miniconda3_py310...
-ARG PYTHON_INSTALL_DIR
+# ARG PYTHON_INSTALL_DIR
 
+# pip install esa-snappy...
+RUN ${CONDA_DIR}/envs/env_snap/bin/python -m pip install esa-snappy
+
+# run snappy-conf on host...
+RUN ${SNAP_INSTALL_DIR}/bin/snappy-conf ${CONDA_DIR}/envs/env_snap/bin/python
 # copy required files from Python installation dir to Docker image...
-# copy snappy.properties file from .snap dir to Docker image...
 
 WORKDIR ${HOME}
