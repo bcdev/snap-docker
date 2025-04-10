@@ -68,29 +68,28 @@ COPY ./notebooks/*.ipynb ${CONDA_DIR}/envs/env_snap/notebooks
 
 ENV SNAP_DEST=${CONDA_DIR}/envs/env_snap/esa-snap
 RUN mkdir -p ${SNAP_DEST}
-COPY ./esa-snap/* ${SNAP_DEST}
+#COPY ./esa-snap/* ${SNAP_DEST}
 
-#RUN mkdir -p ${SNAP_DEST}/etc \
-#    ${SNAP_DEST}/jre \
-#    ${SNAP_DEST}/platform \
-#    ${SNAP_DEST}/rstb \
-#    ${SNAP_DEST}/snap \
-#    ${SNAP_DEST}/microwavetbx \
-#    ${SNAP_DEST}/opttbx/ \
-#    ${HOME}\.snap\snap-python
+RUN mkdir -p ${SNAP_DEST}/etc \
+    ${SNAP_DEST}/jre \
+    ${SNAP_DEST}/platform \
+    ${SNAP_DEST}/rstb \
+    ${SNAP_DEST}/snap \
+    ${SNAP_DEST}/microwavetbx \
+    ${SNAP_DEST}/opttbx/ \
 
 #ADD ./bla.txt ${SNAP_DEST}/bla.txt
 #COPY ./LICENSE.txt ${SNAP_DEST}/LICENSE.txt
 
-#COPY ${SNAP_INSTALL_DIR}/THIRDPARTY_LICENSES.txt ${SNAP_DEST}/THIRDPARTY_LICENSES.TXT
-#COPY ${SNAP_INSTALL_DIR}/VERSION.txt ${SNAP_DEST}/VERSION.TXT
-#COPY ${SNAP_INSTALL_DIR}/etc/ ${SNAP_DEST}/etc/
-#COPY ${SNAP_INSTALL_DIR}/jre/ ${SNAP_DEST}/jre/
-#COPY ${SNAP_INSTALL_DIR}/platform/ ${SNAP_DEST}/platform/
-#COPY ${SNAP_INSTALL_DIR}/rstb/ ${SNAP_DEST}/rstb/
-#COPY ${SNAP_INSTALL_DIR}/snap/ ${SNAP_DEST}/snap/
-#COPY ${SNAP_INSTALL_DIR}/microwavetbx/ ${DEST}/microwavetbx/
-#COPY ${SNAP_INSTALL_DIR}/opttbx/ ${DEST}/opttbx/
+COPY ./esa-snap/THIRDPARTY_LICENSES.txt ${SNAP_DEST}/THIRDPARTY_LICENSES.TXT
+COPY ./esa-snap/VERSION.txt ${SNAP_DEST}/VERSION.TXT
+COPY ./esa-snap/etc/ ${SNAP_DEST}/etc/
+COPY ./esa-snap/jre/ ${SNAP_DEST}/jre/
+COPY ./esa-snap/platform/ ${SNAP_DEST}/platform/
+COPY ./esa-snap/rstb/ ${SNAP_DEST}/rstb/
+COPY ./esa-snap/snap/ ${SNAP_DEST}/snap/
+COPY ./esa-snap/microwavetbx/ ${DEST}/microwavetbx/
+COPY ./esa-snap/opttbx/ ${DEST}/opttbx/
 
 # Python installation dir
 # e.g. /data/software/miniconda3_py310
