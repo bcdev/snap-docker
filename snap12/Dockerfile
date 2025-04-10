@@ -66,17 +66,18 @@ COPY ./notebooks/*.ipynb ${CONDA_DIR}/envs/env_snap/notebooks
 
 # copy required files from SNAP installation dir to Docker image (${CONDA_DIR}/envs/env_snap):
 
-#ENV SNAP_DEST=${CONDA_DIR}/envs/env_snap
+ENV SNAP_DEST=${CONDA_DIR}/envs/env_snap/esa-snap
 
-#RUN mkdir -p ${SNAP_DEST}/etc \
-#    ${SNAP_DEST}/jre \
-#    ${SNAP_DEST}/platform \
-#    ${SNAP_DEST}/rstb \
-#    ${SNAP_DEST}/snap \
-#    ${SNAP_DEST}/microwavetbx \
-#    ${SNAP_DEST}/opttbx/ \
-#    ${HOME}\.snap\snap-python
+RUN mkdir -p ${SNAP_DEST}/etc \
+    ${SNAP_DEST}/jre \
+    ${SNAP_DEST}/platform \
+    ${SNAP_DEST}/rstb \
+    ${SNAP_DEST}/snap \
+    ${SNAP_DEST}/microwavetbx \
+    ${SNAP_DEST}/opttbx/ \
+    ${HOME}\.snap\snap-python
 
+ADD ./bla.txt ${SNAP_DEST}/bla.txt
 #COPY ./LICENSE.txt ${SNAP_DEST}/LICENSE.txt
 
 #COPY ${SNAP_INSTALL_DIR}/THIRDPARTY_LICENSES.txt ${SNAP_DEST}/THIRDPARTY_LICENSES.TXT
