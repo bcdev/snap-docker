@@ -54,56 +54,38 @@ RUN mamba env create -f /tmp/environment.yml                                    
 
 WORKDIR ${HOME}
 
-
-ADD ./install-miniforge.bash /tmp/install-miniforge.bash
-
-RUN chmod 755 /tmp/install-miniforge.bash                                                                                           && \
-    /tmp/install-miniforge.bash                                                                                                     && \
-    rm -f /tmp/install-*.bash                                                                                                       && \
-    chown -R $NB_USER:$NB_GID ${HOME} 
-
-USER ${NB_USER}
-
-ENV PATH=${CONDA_DIR}/envs/env_snap/snap/bin:${CONDA_DIR}/envs/env_snap/bin:${CONDA_DIR}/bin:$PATH \
-    KERNEL_PYTHON_PREFIX=${CONDA_DIR}/envs/env_snap  \
-    PREFIX=${CONDA_DIR}/envs/env_snap
-
-ADD environment.yml /tmp/environment.yml
-
-RUN mamba env create -f /tmp/environment.yml                                                                 && \
-    mamba clean --all -f -y
-
 # copy Jupyter notebooks
-
+#
 RUN mkdir -p ${CONDA_DIR}/envs/env_snap/notebooks
 COPY ./notebooks/*.ipynb ${CONDA_DIR}/envs/env_snap/notebooks
 
 # SNAP installation dir (final location tbd)
 # e.g. /data/software/snap12_rc/esa-snap
 # --> docker build --build-arg SNAP_INSTALL_DIR=/data/software/snap12_rc/esa-snap ...
-ARG SNAP_INSTALL_DIR
+#ARG SNAP_INSTALL_DIR
 
 # copy required files from SNAP installation dir to Docker image (${CONDA_DIR}/envs/env_snap):
 
-ENV SNAP_DEST=${CONDA_DIR}/envs/env_snap
+#ENV SNAP_DEST=${CONDA_DIR}/envs/env_snap
 
-RUN mkdir -p ${SNAP_DEST}/etc \
-    ${SNAP_DEST}/jre \
-    ${SNAP_DEST}/platform \
-    ${SNAP_DEST}/rstb \
-    ${SNAP_DEST}/snap \
-    ${SNAP_DEST}/microwavetbx \
-    ${SNAP_DEST}/opttbx/ \
-    ${HOME}\.snap\snap-python
+#RUN mkdir -p ${SNAP_DEST}/etc \
+#    ${SNAP_DEST}/jre \
+#    ${SNAP_DEST}/platform \
+#    ${SNAP_DEST}/rstb \
+#    ${SNAP_DEST}/snap \
+#    ${SNAP_DEST}/microwavetbx \
+#    ${SNAP_DEST}/opttbx/ \
+#    ${HOME}\.snap\snap-python
 
-COPY ${SNAP_INSTALL_DIR}/LICENSE.html ${SNAP_DEST}/LICENSE.html
-COPY ${SNAP_INSTALL_DIR}/THIRDPARTY_LICENSES.txt ${SNAP_DEST}/THIRDPARTY_LICENSES.TXT
-COPY ${SNAP_INSTALL_DIR}/VERSION.txt ${SNAP_DEST}/VERSION.TXT
-COPY ${SNAP_INSTALL_DIR}/etc/ ${SNAP_DEST}/etc/
-COPY ${SNAP_INSTALL_DIR}/jre/ ${SNAP_DEST}/jre/
-COPY ${SNAP_INSTALL_DIR}/platform/ ${SNAP_DEST}/platform/
-COPY ${SNAP_INSTALL_DIR}/rstb/ ${SNAP_DEST}/rstb/
-COPY ${SNAP_INSTALL_DIR}/snap/ ${SNAP_DEST}/snap/
+#COPY ./LICENSE.txt ${SNAP_DEST}/LICENSE.txt
+
+#COPY ${SNAP_INSTALL_DIR}/THIRDPARTY_LICENSES.txt ${SNAP_DEST}/THIRDPARTY_LICENSES.TXT
+#COPY ${SNAP_INSTALL_DIR}/VERSION.txt ${SNAP_DEST}/VERSION.TXT
+#COPY ${SNAP_INSTALL_DIR}/etc/ ${SNAP_DEST}/etc/
+#COPY ${SNAP_INSTALL_DIR}/jre/ ${SNAP_DEST}/jre/
+#COPY ${SNAP_INSTALL_DIR}/platform/ ${SNAP_DEST}/platform/
+#COPY ${SNAP_INSTALL_DIR}/rstb/ ${SNAP_DEST}/rstb/
+#COPY ${SNAP_INSTALL_DIR}/snap/ ${SNAP_DEST}/snap/
 #COPY ${SNAP_INSTALL_DIR}/microwavetbx/ ${DEST}/microwavetbx/
 #COPY ${SNAP_INSTALL_DIR}/opttbx/ ${DEST}/opttbx/
 
@@ -113,10 +95,10 @@ COPY ${SNAP_INSTALL_DIR}/snap/ ${SNAP_DEST}/snap/
 # ARG PYTHON_INSTALL_DIR
 
 # pip install esa-snappy...
-RUN ${CONDA_DIR}/envs/env_snap/bin/python -m pip install esa-snappy
+#RUN ${CONDA_DIR}/envs/env_snap/bin/python -m pip install esa-snappy
 
 # run snappy-conf on host...
-RUN ${SNAP_INSTALL_DIR}/bin/snappy-conf ${CONDA_DIR}/envs/env_snap/bin/python
+#RUN ${SNAP_INSTALL_DIR}/bin/snappy-conf ${CONDA_DIR}/envs/env_snap/bin/python
 # copy required files from Python installation dir to Docker image...
 
 WORKDIR ${HOME}
