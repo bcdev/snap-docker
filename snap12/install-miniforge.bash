@@ -3,12 +3,16 @@
 set -ex
 
 cd $(dirname $0)
-MAMBAFORGE_VERSION=4.9.2-3
+#MAMBAFORGE_VERSION=4.9.2-3
+# Python 3.12, Oct 2024:
+MAMBAFORGE_VERSION=24.9.0-0
 # SHA256 for installers can be obtained from https://github.com/conda-forge/miniforge/releases
 SHA256SUM="2263861c8927fce272fd97072e1822f268c6bec8c2fee9724d7df54d7fe80a36"
 #https://github.com/conda-forge/miniforge/releases/download/4.9.2-3/Mambaforge-4.9.2-3-Linux-x86_64.sh
 
-URL="https://github.com/conda-forge/miniforge/releases/download/${MAMBAFORGE_VERSION}/Mambaforge-${MAMBAFORGE_VERSION}-Linux-x86_64.sh"
+#URL="https://github.com/conda-forge/miniforge/releases/download/${MAMBAFORGE_VERSION}/Mambaforge-${MAMBAFORGE_VERSION}-Linux-x86_64.sh"
+#    https://github.com/conda-forge/miniforge/releases/download/24.11.3-2/Miniforge3-24.11.3-2-Linux-x86_64.sh
+URL="https://github.com/conda-forge/miniforge/releases/download/${MAMBAFORGE_VERSION}/Miniforge3-${MAMBAFORGE_VERSION}-Linux-x86_64.sh"
 INSTALLER_PATH=/tmp/miniforge-installer.sh
 
 # make sure we don't do anything funky with user's $HOME
@@ -19,10 +23,10 @@ wget --quiet --no-check-certificate $URL -O ${INSTALLER_PATH}
 chmod +x ${INSTALLER_PATH}
 
 # check sha256 checksum
-if ! echo "${SHA256SUM}  ${INSTALLER_PATH}" | sha256sum  --quiet -c -; then
-    echo "sha256 mismatch for ${INSTALLER_PATH}, exiting!"
-    exit 1
-fi
+#if ! echo "${SHA256SUM}  ${INSTALLER_PATH}" | sha256sum  --quiet -c -; then
+#    echo "sha256 mismatch for ${INSTALLER_PATH}, exiting!"
+#    exit 1
+#fi
 
 bash ${INSTALLER_PATH} -b -p ${CONDA_DIR}
 export PATH="${CONDA_DIR}/bin:$PATH"

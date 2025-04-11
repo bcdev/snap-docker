@@ -88,8 +88,8 @@ COPY ./esa-snap/jre/ ${SNAP_DEST}/jre/
 COPY ./esa-snap/platform/ ${SNAP_DEST}/platform/
 COPY ./esa-snap/rstb/ ${SNAP_DEST}/rstb/
 COPY ./esa-snap/snap/ ${SNAP_DEST}/snap/
-COPY ./esa-snap/microwavetbx/ ${DEST}/microwavetbx/
-COPY ./esa-snap/opttbx/ ${DEST}/opttbx/
+COPY ./esa-snap/microwavetbx/ ${SNAP_DEST}/microwavetbx/
+COPY ./esa-snap/opttbx/ ${SNAP_DEST}/opttbx/
 
 # Python installation dir
 # e.g. /data/software/miniconda3_py310
