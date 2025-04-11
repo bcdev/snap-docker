@@ -14,10 +14,10 @@ ENV LC_ALL=en_US.UTF-8 \
     NB_GID=1002 \
     APP_BASE=/srv
     
-ENV USER=${NB_USER} \ 
-    HOME=/home/${NB_USER} \
-    CONDA_DIR=${APP_BASE}/conda
-    SNAP_DIR=${APP_BASE}/esa-snap
+ENV USER=${NB_USER}
+ENV HOME=/home/${NB_USER}
+ENV CONDA_DIR=${APP_BASE}/conda
+ENV SNAP_DIR=${APP_BASE}/conda/snap
 
     
 RUN groupadd --gid ${NB_GID} ${NB_USER}                                                                                             && \
@@ -44,7 +44,7 @@ RUN chmod 755 /tmp/install-miniforge.bash                                       
 
 USER ${NB_USER}
 
-ENV PATH=${SNAP_DIR}/snap/bin:${CONDA_DIR}/bin:$PATH \
+ENV PATH=${SNAP_DIR}/esa-snap/snap/bin:${CONDA_DIR}/bin:$PATH \
     KERNEL_PYTHON_PREFIX=${CONDA_DIR}  \
     PREFIX=${CONDA_DIR}
 
@@ -54,31 +54,33 @@ WORKDIR ${HOME}
 
 # copy Jupyter notebooks
 #
-RUN mkdir -p ${CONDA_DIR}/notebooks
-COPY ./notebooks/*.ipynb ${CONDA_DIR}/notebooks
+RUN mkdir -p ${SNAP_DIR}/notebooks
+COPY ./notebooks/*.ipynb ${SNAP_DIR}/notebooks
 
-# copy required files from SNAP installation dir to Docker image (${CONDA_DIR}/envs/env_snap):
+# copy required files from SNAP dir on host to Docker image (${SNAP_DIR}/env_snap):
 
-RUN mkdir -p ${SNAP_DIR}
+RUN mkdir -p ${SNAP_DIR}/esa-snap
 
-RUN mkdir -p ${SNAP_DIR}/etc \
-    ${SNAP_DIR}/bin \
-    ${SNAP_DIR}/jre \
-    ${SNAP_DIR}/platform \
-    ${SNAP_DIR}/rstb \
-    ${SNAP_DIR}/snap \
-    ${SNAP_DIR}/microwavetbx \
-    ${SNAP_DIR}/opttbx/ \
+RUN mkdir -p ${SNAP_DIR}/esa-snap/etc \
+    ${SNAP_DIR}/esa-snap/bin \
+    ${SNAP_DIR}/esa-snap/jre \
+    ${SNAP_DIR}/esa-snap/platform \
+    ${SNAP_DIR}/esa-snap/rstb \
+    ${SNAP_DIR}/esa-snap/snap \
+    ${SNAP_DIR}/esa-snap/microwavetbx \
+    ${SNAP_DIR}/esa-snap/opttbx/ \
+    ${SNAP_DIR}/esa-snap/esasnappy/
 
-COPY ./esa-snap/VERSION.txt ${SNAP_DIR}/VERSION.TXT
-COPY ./esa-snap/etc/ ${SNAP_DIR}/etc/
-COPY ./esa-snap/bin/ ${SNAP_DIR}/bin/
-COPY ./esa-snap/jre/ ${SNAP_DIR}/jre/
-COPY ./esa-snap/platform/ ${SNAP_DIR}/platform/
-COPY ./esa-snap/rstb/ ${SNAP_DIR}/rstb/
-COPY ./esa-snap/snap/ ${SNAP_DIR}/snap/
-COPY ./esa-snap/microwavetbx/ ${SNAP_DIR}/microwavetbx/
-COPY ./esa-snap/opttbx/ ${SNAP_DIR}/opttbx/
+COPY ./esa-snap/VERSION.txt ${SNAP_DIR}/esa-snap/VERSION.TXT
+COPY ./esa-snap/etc/ ${SNAP_DIR}/esa-snap/etc/
+COPY ./esa-snap/bin/ ${SNAP_DIR}/esa-snap/bin/
+COPY ./esa-snap/jre/ ${SNAP_DIR}/esa-snap/jre/
+COPY ./esa-snap/platform/ ${SNAP_DIR}/esa-snap/platform/
+COPY ./esa-snap/rstb/ ${SNAP_DIR}/esa-snap/rstb/
+COPY ./esa-snap/snap/ ${SNAP_DIR}/esa-snap/snap/
+COPY ./esa-snap/microwavetbx/ ${SNAP_DIR}/esa-snap/microwavetbx/
+COPY ./esa-snap/opttbx/ ${SNAP_DIR}/esa-snap/opttbx/
+COPY ./esa-snap/esasnappy/ ${SNAP_DIR}/esa-snap/esasnappy/
 
 # pip install esa-snappy...
 RUN ${CONDA_DIR}/bin/python -m pip install esa-snappy
@@ -88,6 +90,6 @@ RUN ${CONDA_DIR}/bin/python -m pip install jupyter
 
 # run snappy-conf on host...
 RUN mkdir -p ${HOME}/.snap/snap-python
-RUN ${SNAP_DIR}/bin/snappy-conf ${CONDA_DIR}/envs/env_snap/bin/python
+RUN ${SNAP_DIR}/esa-snap/bin/snappy-conf ${CONDA_DIR}/bin/python
 
 WORKDIR ${HOME}
