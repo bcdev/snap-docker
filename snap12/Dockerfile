@@ -69,7 +69,8 @@ RUN mkdir -p ${SNAP_DIR}/esa-snap/etc \
     ${SNAP_DIR}/esa-snap/snap \
     ${SNAP_DIR}/esa-snap/microwavetbx \
     ${SNAP_DIR}/esa-snap/opttbx/ \
-    ${SNAP_DIR}/esa-snap/esasnappy/
+    ${SNAP_DIR}/esa-snap/esasnappy/ \
+    ${SNAP_DIR}/esa-snap/.install4j/
 
 COPY ./esa-snap/VERSION.txt ${SNAP_DIR}/esa-snap/VERSION.TXT
 COPY ./esa-snap/etc/ ${SNAP_DIR}/esa-snap/etc/
@@ -81,6 +82,7 @@ COPY ./esa-snap/snap/ ${SNAP_DIR}/esa-snap/snap/
 COPY ./esa-snap/microwavetbx/ ${SNAP_DIR}/esa-snap/microwavetbx/
 COPY ./esa-snap/opttbx/ ${SNAP_DIR}/esa-snap/opttbx/
 COPY ./esa-snap/esasnappy/ ${SNAP_DIR}/esa-snap/esasnappy/
+COPY ./esa-snap/.install4j/ ${SNAP_DIR}/esa-snap/.install4j/
 
 # pip install esa-snappy...
 RUN ${CONDA_DIR}/bin/python -m pip install esa-snappy

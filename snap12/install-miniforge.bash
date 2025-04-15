@@ -3,9 +3,12 @@
 set -ex
 
 cd $(dirname $0)
+# Python 3.8:
 #MAMBAFORGE_VERSION=4.9.2-3
 # Python 3.12, Oct 2024:
 MAMBAFORGE_VERSION=24.9.0-0
+# Python 3.11, Aug 2023:
+#MAMBAFORGE_VERSION=23.3.1-0
 #URL="https://github.com/conda-forge/miniforge/releases/download/${MAMBAFORGE_VERSION}/Mambaforge-${MAMBAFORGE_VERSION}-Linux-x86_64.sh"
 URL="https://github.com/conda-forge/miniforge/releases/download/${MAMBAFORGE_VERSION}/Miniforge3-${MAMBAFORGE_VERSION}-Linux-x86_64.sh"
 INSTALLER_PATH=/tmp/miniforge-installer.sh
