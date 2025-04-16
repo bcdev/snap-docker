@@ -54,8 +54,13 @@ WORKDIR ${HOME}
 
 # copy Jupyter notebooks
 #
-RUN mkdir -p ${SNAP_DIR}/notebooks
+RUN mkdir -p ${SNAP_DIR}/notebooks/data
 COPY ./notebooks/*.ipynb ${SNAP_DIR}/notebooks
+COPY ./notebooks/data/*.nc ${SNAP_DIR}/notebooks/data
+
+RUN mkdir -p ${HOME}/notebooks/data
+COPY ./notebooks/*.ipynb ${HOME}/notebooks
+COPY ./notebooks/data/*.nc ${HOME}/notebooks/data
 
 # copy required files from SNAP dir on host to Docker image (${SNAP_DIR}/env_snap):
 
