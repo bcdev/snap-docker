@@ -1,9 +1,0 @@
-name: env_snap
-channels:
-  - conda-forge
-dependencies:
-  - python
-  - jupyter
-  - lxml
-  - attrs
-  - requests
