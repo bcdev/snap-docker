@@ -5,6 +5,8 @@
 
 This is a project for the creation of Docker images containing the latest published SNAP version (currently SNAP 12).
 
+UPDATE: As of November 2025, the latest published SNAP version is SNAP 13!
+
 The project is based on an earlier setup for SNAP 8, 
 see https://github.com/snap-contrib/docker-snap. 
 
@@ -13,17 +15,17 @@ from cloud environments and to access the corresponding <i>esa_snappy</i> from J
 
 ## Accessing and using the docker images
 
-A docker image containing an Ubuntu environment, a Python environment (Python version 3.10), and a SNAP 12 installation with
+A docker image containing an Ubuntu environment, a Python environment (Python version 3.10), and a SNAP 13 installation with
 <i>esa_snappy</i> configured and ready to use can be pulled from
 
 ```console
-docker pull quay.io/bcdev/snap12_python
+docker pull quay.io/bcdev/snap13_python
 ```
 
-A docker image with reduced size containing an Ubuntu environment and a SNAP 12 installation (but no Python environment) can be pulled from
+A docker image with reduced size containing an Ubuntu environment and a SNAP 13 installation (but no Python environment) can be pulled from
 
 ```console
-docker pull quay.io/bcdev/snap12
+docker pull quay.io/bcdev/snap13
 ```
 
 This image can be used for running the SNAP Desktop GUI inside a Docker container.
