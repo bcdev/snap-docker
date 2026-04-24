@@ -1,23 +1,23 @@
-# Copy this file into 'Dockerfile' to build an image with Ububntu + SNAP + Python installation + Snappy configured
+# Copy this file into 'Dockerfile' to build an image with Ububntu + SNAP (no Python installation, no Snappy configuration)
+# The image provides the capability to start the SNAP Desktop GUI within the Docker container.
+# Currently known limitations:
+# - Worldwind functionality not yet supported due to native library issues. 
 
 # Run the image with:
-# docker run --rm -p 8888:8888 docker_snap_python:1
-#
+# - make sure that .Xauthority file exists and is provided as environment variable :
+# export XAUTHORITY=$HOME/.Xauthority
+# - then start the container:
+# sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap_python:1
+# 
 
 FROM mambaorg/micromamba:ubuntu24.04
 
-COPY --chown=$MAMBA_USER:$MAMBA_USER env.yaml /tmp/env.yaml
-RUN micromamba install -y -n base -f /tmp/env.yaml && \
-    micromamba clean --all --yes
-ARG MAMBA_DOCKERFILE_ACTIVATE=1
-
 WORKDIR /home/mambauser
+
+USER root
+RUN apt-get -qq update && apt-get -qq install -y curl xauth x11-apps libxtst6 libxxf86vm1
 
 RUN curl -O \
     https://download.esa.int/step/snap/13.0/installers/esa-snap_all_linux-13.0.0.sh && \
     sh esa-snap_all_linux-13.0.0.sh -q && \
     rm esa-snap_all_linux-13.0.0.sh
-
-RUN ./esa-snap/bin/snappy-conf /opt/conda/bin/python
-
-CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser"]

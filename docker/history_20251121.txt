@@ -1,0 +1,1000 @@
+ 1013  exit
+ 1014  h
+ 1015  exit
+ 1016  htop
+ 1017  free -h
+ 1018  ll
+ 1019  mkdir lps
+ 1020  which gpt
+ 1021  ll snap_12.0.0/
+ 1022  ll snap_12.0.0/esa-snap/
+ 1023  cd lps
+ 1024  ll
+ 1025  nano -w lps_resampleL1c.xml
+ 1026  ../snap_12.0.0/esa-snap/bin/gpt lps_resampleL1c.xml
+ 1027  ll
+ 1028  cp lps_resampleL1c.xml lps_S2ResampleL1c.xml
+ 1029  nano -w lps_S2ResampleL1c.xml
+ 1030  gpt lps_S2ResampleL1c.xml
+ 1031  source ~/.bashrc
+ 1032  gpt lps_S2ResampleL1c.xml
+ 1033  gpt -h S2Resampling
+ 1034  ll
+ 1035  cp l1c_s2resampling60m_result.nc l1c_s2resampling10m_result.nc
+ 1036  nano -w l1c_s2resampling10m_result.nc
+ 1037  rm *result.nc
+ 1038  ll
+ 1039  cp lps_S2ResampleL1c.xml lps_S2ResampleL1c10m.xml
+ 1040  nano -w lps_S2ResampleL1c10m.xml
+ 1041  gpt lps_S2ResampleL1c10m.xml
+ 1042  ll
+ 1043  exit
+ 1044  top
+ 1045  htop
+ 1046  ps -ef |grep gpt
+ 1047  cat /proc/cpuinfo
+ 1048  top
+ 1049  pwd
+ 1050  ll
+ 1051  nano -w .bashrc
+ 1052  source .bashec
+ 1053  source .bashrc
+ 1054  which gpt
+ 1055  gpt -h
+ 1056  nano -w .bashrc
+ 1057  source .bashrc
+ 1058  which gpt
+ 1059  gpt -h
+ 1060  gpt -h S2Resampling
+ 1061  top
+ 1062  cd lps
+ 1063  ll
+ 1064  gpt -h Biophysical10mOp
+ 1065  gpt -h NdviOp
+ 1066  gpt -h Merge
+ 1067  gpt -h BandMerge
+ 1068  gpt -h Subset
+ 1069  gpt -h Write
+ 1070  gpt -h S2Resampling
+ 1071  gpt -h Subset
+ 1072  gpt -h Merge
+ 1073  exit
+ 1074  h
+ 1075  h |grep firefox
+ 1076  firefox
+ 1077  exit
+ 1078  firefox http://127.0.0.1:8888/tree?token=91fb5c7e649fa1836af989730362a8485ec930acc1fc21fa
+ 1079  firefox http://127.0.0.1:8888/lab?token=91fb5c7e649fa1836af989730362a8485ec930acc1fc21fa
+ 1080  exit
+ 1081  docker ps
+ 1082  docker exec -it <CONTAINER_ID> /bin/bash
+ 1083  docker exec -it 1afb4c988fb6 /bin/bash
+ 1084  exit
+ 1085  ll
+ 1086  cd lps
+ 1087  ll
+ 1088  cd ../docker_get_started/
+ 1089  ll
+ 1090  ll workspace/
+ 1091  ll workspace/snap-docker/
+ 1092  ll workspace/docker-snap/
+ 1093  cd workspace/
+ 1094  ll
+ 1095  git clone git@github.com:bcdev/snap-lps25.git
+ 1096  ll
+ 1097  cd snap-lps25/
+ 1098  ll
+ 1099  cd docker/
+ 1100  ll
+ 1101  docker build --no-cache -t docker_lps25
+ 1102  docker build --no-cache -t docker_lps25 .
+ 1103  docker run --rm -p 8888:8888 docker_lps25
+ 1104  exit
+ 1105  firefox
+ 1106  exit
+ 1107  h
+ 1108  docker ps
+ 1109  cd workspace
+ 1110  ll
+ 1111  cd
+ 1112  cd docker_get_started/workspace/snap-lps25/
+ 1113  docker images
+ 1114  docker run --rm -p 8888:8888 docker_lps25
+ 1115  exit
+ 1116  h
+ 1117  firefox http://127.0.0.1:8888/lab?token=a57286b732a72df98424472247394a1e5842ca972fe2d653
+ 1118  exit
+ 1119  docker ps
+ 1120  docker images
+ 1121  exit
+ 1122  h
+ 1123  docker ps
+ 1124  docker exec -it 676cc734d67a /bin/bash
+ 1125  exit
+ 1126  h
+ 1127  firefox http://127.0.0.1:8888/lab?token=4b1b14d836859957d5942a8ad4537c9ba5a590fc8707355d
+ 1128  exit
+ 1129  cd docker_get_started/
+ 1130  ll
+ 1131  cd workspace/
+ 1132  ll
+ 1133  cd snap-lps25/
+ 1134  ll
+ 1135  cd docker/
+ 1136  ll
+ 1137  h
+ 1138  docker images
+ 1139  docker ps
+ 1140  docker run --rm -p 8888:8888 docker_lps25
+ 1141  exit
+ 1142  env |grep DISPLAY
+ 1143  ll .snap
+ 1144  ll .snap/system/
+ 1145  ll .snap/auxdata/
+ 1146  ll
+ 1147  ll snap_12.0.0/esa-snap/jre/lib/
+ 1148  ./snap_12.0.0/esa-snap/bin/snap
+ 1149  find . -name 'libXext.so.6'
+ 1150  ls -la .conda
+ 1151  ls -la .conda/pkgs/
+ 1152  du -s -BG .conda/pkgs/
+ 1153  mv .conda/pkgs/ .conda/pkgs_BAK
+ 1154  ./snap_12.0.0/esa-snap/bin/snap
+ 1155  docker images
+ 1156  docker run --rm -p 8888:8888 docker_snap12_test
+ 1157  h |grep run
+ 1158  docker ps
+ 1159  docker run --rm -it -p 8888:8888 docker_snap12_test
+ 1160  sudo apt-get update
+ 1161  sudo apt-get install x11-apps
+ 1162  xclock
+ 1163  h |grep build
+ 1164  docker images
+ 1165  h
+ 1166  docker images
+ 1167  docker run --rm -p 8888:8888 snapdocker:1
+ 1168  docker run --rm -it -p 8888:8888 snapdocker:1
+ 1169  docker run --rm -it snapdocker:1
+ 1170  xhost
+ 1171  xhost +local:docker
+ 1172  xhost
+ 1173  docker run --rm -it snapdocker:1
+ 1174  export DISPLAY=:0.0
+ 1175  xhost +local:docker
+ 1176  xhost
+ 1177  export DISPLAY=127.0.0.1:10.0
+ 1178  xhost
+ 1179  xhost +local:docker
+ 1180  sudo docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority --env="QT_X11_NO_MITSHM=1" snapdocker:1
+ 1181  env |grep DISPLAY
+ 1182  ll /tmp/.X11-unix
+ 1183  ll /tmp/.XAuthority
+ 1184  env |grep XAUTHORITY
+ 1185  docker run --rm -ti -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix snapdocker:1
+ 1186  docker ps
+ 1187  env |grep DISPLAY
+ 1188  export DISPLAY=localhost:10.0
+ 1189  docker run --rm -ti -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix snapdocker:1
+ 1190  xhost +
+ 1191  docker run --rm -ti -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix snapdocker:1
+ 1192  docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix snapdocker:1
+ 1193  xeyes
+ 1194  xeyes &
+ 1195  ls -la ~
+ 1196  xhost +local:docker
+ 1197  sudo xhost +local:docker
+ 1198  xhost
+ 1199  docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix snapdocker:1
+ 1200  docker images
+ 1201  htop
+ 1202  docker images
+ 1203  sudo xhost +local:docker
+ 1204  xhost
+ 1205  env |grep XAUTH
+ 1206  env
+ 1207  xauth
+ 1208  ll /home/olafd/.Xauthority
+ 1209  env |grep XAUTH
+ 1210  export XAUTHORITY=/home/olafd/.Xauthority
+ 1211  env |grep XAUTH
+ 1212  sudo xhost +local:docker
+ 1213  sudo docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority --env="QT_X11_NO_MITSHM=1" snapdocker:1
+ 1214  exit
+ 1215  h
+ 1216  cd docker_get_started/workspace/snap-lps25/
+ 1217  docker ps
+ 1218  docker exec -it 99826fc58809 /bin/bash
+ 1219  sudo apt-get install xpra xserver-xephyr xinit xauth xclip x11-xserver-utils x11-utils -y
+ 1220  curl -fsSL https://raw.githubusercontent.com/mviereck/x11docker/master/x11docker | sudo bash -s -- --update
+ 1221  1
+ 1222  sudo x11docker --update
+ 1223  docker pull jess/vlc
+ 1224  x11docker --help
+ 1225  x11docker --pulseaudio --share=$HOME/Videos jess/vlc
+ 1226  mkdir -p ~/Videos
+ 1227  x11docker --pulseaudio --share=$HOME/Videos jess/vlc
+ 1228  docker image
+ 1229  h
+ 1230  docker images
+ 1231  x11docker docker_lps25
+ 1232  cd ..
+ 1233  cd snap-docker/
+ 1234  ll
+ 1235  git pull -a
+ 1236  cd docker/
+ 1237  docker build --tag snapdocker:1 .
+ 1238  x11docker snapdocker
+ 1239  docker images
+ 1240  x11docker snapdocker:1
+ 1241  docker ps
+ 1242  h |grep run
+ 1243  docker run --rm -p 8888:8888 docker_lps25
+ 1244  docker build --no-cache --tag snapdocker:1 .
+ 1245  sudo docker build --no-cache --tag snapdocker:1 .
+ 1246  ls -la
+ 1247  sudo docker build --no-cache --tag snapdocker:1 .
+ 1248  h |grep run
+ 1249  h |grep snapdocker
+ 1250  docker build --no-cache --tag snapdocker:1 .
+ 1251  docker images
+ 1252  docker ps
+ 1253  docker buildx prune -a
+ 1254  docker images prune -a
+ 1255  sudo docker images prune -a
+ 1256  sudo docker system prune -a
+ 1257  docker images
+ 1258  docker build --no-cache --tag snapdocker:1 .
+ 1259  sudo docker build --no-cache --tag snapdocker:1 .
+ 1260  sudo docker system prune -a
+ 1261  sudo docker build --no-cache --tag snapdocker:1 .
+ 1262  exit
+ 1263  h
+ 1264  cd docker_get_started/workspace/snap-lps25/
+ 1265  docker images
+ 1266  docker ps
+ 1267  docker run --rm -p 8888:8888 docker_lps25
+ 1268  docker ps
+ 1269  h
+ 1270  docker ps
+ 1271  docker exec -it 2091f37d11cd /bin/bash
+ 1272  docker ps
+ 1273  docker exec -it 46587de40600 /bin/bash
+ 1274  env |gep DISPLAY
+ 1275  env |grep DISPLAY
+ 1276  ll
+ 1277  cd ../snap-docker/
+ 1278  ll
+ 1279  cd docker/
+ 1280  ll
+ 1281  nano -w Dockerfile 
+ 1282  h |grep build
+ 1283  nano -w Dockerfile 
+ 1284  env |grep DISPLAY
+ 1285  nano -w Dockerfile 
+ 1286  exit
+ 1287  cd docker_get_started/workspace/snap-docker/
+ 1288  h
+ 1289  ls -la ~/.*
+ 1290  ls -la ~/.X*
+ 1291  cd docker/
+ 1292  nano -w Dockerfile 
+ 1293  h
+ 1294  sudo docker system prune -a
+ 1295  docker images
+ 1296  sudo docker build --no-cache --tag snapdocker:1 .
+ 1297  h |grep run
+ 1298  xhost +local:docker
+ 1299  env |grep XAUTH
+ 1300  h |grep XAUTH
+ 1301  export XAUTHORITY=/home/olafd/.Xauthority
+ 1302  docker run --rm -ti -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1303  h
+ 1304  sudo docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority --env="QT_X11_NO_MITSHM=1" snapdocker:1
+ 1305  sudo docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1306  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1307  sudo docker run --rm -ti -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1308  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1309  h
+ 1310  nano -w Dockerfile 
+ 1311  sudo docker system prune -a
+ 1312  sudo docker build --no-cache --tag snapdocker:1 .
+ 1313  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1314  nano -w Dockerfile 
+ 1315  h
+ 1316  sudo docker system prune -a
+ 1317  docker images
+ 1318  sudo docker build --no-cache --tag snapdocker:1 .
+ 1319  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1320  nano -w Dockerfile 
+ 1321  h
+ 1322  sudo docker system prune -a
+ 1323  sudo docker build --no-cache --tag snapdocker:1 .
+ 1324  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1325  h
+ 1326  nano -w Dockerfile 
+ 1327  sudo docker system prune -a
+ 1328  sudo docker build --no-cache --tag snapdocker:1 .
+ 1329  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1330  nano -w Dockerfile 
+ 1331  sudo docker system prune -a
+ 1332  sudo docker build --no-cache --tag snapdocker:1 .
+ 1333  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1334  exit
+ 1335  env |grep DISPLAY
+ 1336  ll /opt/esa-snap/jre/lib/libawt_xawt.so
+ 1337  ll
+ 1338  ll ./snap_12.0.0/esa-snap/jre/lib/libawt_xawt.so
+ 1339  ll ./snap_12.0.0/esa-snap/jre/lib
+ 1340  ll .snap
+ 1341  ll .snap/auxdata/
+ 1342  ll .snap/auxdata/hdf_natives/
+ 1343  ll .snap/auxdata/hdf_natives/12.0.0/
+ 1344  ll .snap/auxdata/hdf_natives/12.0.0/amd64/
+ 1345  ll .snap/auxdata/
+ 1346  find .snap -name '*native*.so'
+ 1347  find  -name '*.so'
+ 1348  ll
+ 1349  find snap_12.0.0 -name '*native*.so'
+ 1350  find snap_12.0.0 -name '*.so'
+ 1351  find snap_12.0.0 -name '*vm.so*'
+ 1352  ll /tmp
+ 1353  ll /tmp/jogamp_0000/
+ 1354  ll /tmp/jogamp_0000/file_cache/
+ 1355  ll /tmp/jogamp_0000/file_cache/jln1336582368773370160
+ 1356  ll /tmp/jogamp_0000/file_cache/jln1336582368773370160/jln14865622154675430600
+ 1357  ll /tmp/jogamp_0000/file_cache/jln1336582368773370160/jln14865622154675430600/natives/
+ 1358  ll /tmp/jogamp_0000/file_cache/jln1336582368773370160/jln14865622154675430600/natives/linux-amd64/
+ 1359  find .snap '*jogl*'
+ 1360  find .snap -name '*jogl*'
+ 1361  lsb_release -a 
+ 1362  h
+ 1363  pwd
+ 1364  cd tmp/
+ 1365  ll
+ 1366  rm *snap*.sh
+ 1367  ll
+ 1368  wget https://download.esa.int/step/snap/12.0/installers/esa-snap_all_linux-12.0.0.sh
+ 1369  ll
+ 1370  chmod u+x esa-snap_all_linux-12.0.0.sh
+ 1371  ./esa-snap_all_linux-12.0.0.sh 
+ 1372  ./esa-snap_all_linux-12.0.0.sh -q
+ 1373  cd
+ 1374  ./snap_12.0.0/esa-snap/bin/snap
+ 1375  exit
+ 1376  cd docker_get_started/workspace/snap-docker/
+ 1377  cd docker/
+ 1378  cat Dockerfile 
+ 1379  sudo docker build --no-cache --tag snapdocker:1 .h
+ 1380  h
+ 1381  cat Dockerfile 
+ 1382  ll
+ 1383  cat env.yaml 
+ 1384  ll ~/.snap/auxdata/
+ 1385  find ~/.snap/auxdata/ -name '*libstdc*'
+ 1386  tar tzvf mygdal.tar.gz  ~/.snap/auxdata/gdal
+ 1387  tar tzvf ~/.snap/auxdata/gdal  mygdal.tar.gz 
+ 1388  tar czvf mygdal.tar.gz  ~/.snap/auxdata/gdal
+ 1389  exit
+ 1390  cd docker_get_started/workspace/snap-docker/
+ 1391  cd docker/
+ 1392  ll
+ 1393  cat Dockerfile 
+ 1394  h
+ 1395  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1396  sudo docker system prune -a
+ 1397  cat Dockerfile 
+ 1398  h
+ 1399  sudo docker build --no-cache --tag snapdocker:1 .
+ 1400  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1401  ll ~/.X*
+ 1402  env |grep XAUTH
+ 1403  export XAUTHORITY=/home/olafd/.Xauthority
+ 1404  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1405  cat Dockerfile 
+ 1406  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1407  nano -w Dockerfile 
+ 1408  h
+ 1409  sudo docker system prune -a
+ 1410  sudo docker build --no-cache --tag snapdocker:1 .
+ 1411  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1412  ping 10.1.0.23
+ 1413  ssh olafd@10.1.0.23
+ 1414  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snapdocker:1
+ 1415  cat Dockerfile 
+ 1416  ll
+ 1417  cp Dockerfile Dockerfile_snap
+ 1418  cp Dockerfile Dockerfile_snap_python
+ 1419  nano -w Dockerfile_snap
+ 1420  exit
+ 1421  h
+ 1422  docker ps
+ 1423  docker exec -it 785803ca2ac6 /bin/bash
+ 1424  exit
+ 1425  firefox http://127.0.0.1:8888/lab?token=2f584ef65aaf363021801de2aa746f4f3f711be72dadcd3c
+ 1426  cd /opt
+ 1427  ll
+ 1428  cd miniconda3/
+ 1429  ll
+ 1430  ll envs/
+ 1431  h
+ 1432  docker exec -it 785803ca2ac6 /bin/bash
+ 1433  ll *nb
+ 1434  cd
+ 1435  ll *nb
+ 1436  cd lps/
+ 1437  ll
+ 1438  cd ..
+ 1439  find . -name '*.ipynb'
+ 1440  cd ./docker_get_started/workspace/snap-docker/snap12/notebooks
+ 1441  ll
+ 1442  docker images
+ 1443  cp snapista-demo-bandmaths.ipynb 0aaa5649c3be:/home/mambauser/snapista-demo-bandmaths.ipynb
+ 1444  docker cp snapista-demo-bandmaths.ipynb 0aaa5649c3be:/home/mambauser/snapista-demo-bandmaths.ipynb
+ 1445  docker ps
+ 1446  docker cp snapista-demo-bandmaths.ipynb 785803ca2ac6:/home/mambauser/snapista-demo-bandmaths.ipynb
+ 1447  firefox http://127.0.0.1:8888/lab?token=2f584ef65aaf363021801de2aa746f4f3f711be72dadcd3c
+ 1448  exit
+ 1449  cd docker_get_started/workspace/snap-docker/docker/
+ 1450  ll
+ 1451  ca Dockerfile
+ 1452  cat Dockerfile
+ 1453  nano -w Dockerfile_snap_python
+ 1454  cp -p Dockerfile_snap_python Dockerfile
+ 1455  h |grep build
+ 1456  sudo docker build --no-cache --tag docker_snap_python:1 .
+ 1457  nano -w Dockerfile_snap_python
+ 1458  diff Dockerfile_snap_python Dockerfile
+ 1459  nano -w Dockerfile_snap_python
+ 1460  cp -p Dockerfile_snap_python Dockerfile
+ 1461  h
+ 1462  sudo docker system prune -a
+ 1463  sudo docker build --no-cache --tag docker_snap_python:1 .
+ 1464  nano -w Dockerfile_snap
+ 1465  cp -p Dockerfile_snap Dockerfile
+ 1466  sudo docker build --no-cache --tag docker_snap:1 .
+ 1467  docker images
+ 1468  h |grep run
+ 1469  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1470  h
+ 1471  nano -w Dockerfile_snap
+ 1472  cp -p Dockerfile_snap Dockerfile
+ 1473  sudo docker build --no-cache --tag docker_snap:1 .
+ 1474  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1475  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap_python:1
+ 1476  sudo docker run --rm -ti --net=host -p 8888:8888 -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap_python:1
+ 1477  exit
+ 1478  ll
+ 1479  ll snap_11.0.0/
+ 1480  ll tmp
+ 1481  ll tmp/tmp2/
+ 1482  ll tmp/data
+ 1483  which python
+ 1484  python
+ 1485  python --version
+ 1486  which gpt
+ 1487  lsb_release -a
+ 1488  pwd
+ 1489  cd tmp
+ 1490  ll
+ 1491  cd
+ 1492  ll
+ 1493  chmod u+x esa-snap_sentinel_linux-11.0.0.sh
+ 1494  ./esa-snap_sentinel_linux-11.0.0.sh -q
+ 1495  which python
+ 1496  /home/olafd/snap_12.0.0/esa-snap/bin/snappy-conf /home/olafd/miniconda3-py39/bin/python
+ 1497  /home/olafd/snap_12.0.0/esa-snap/bin/snap
+ 1498  /home/olafd/snap_12.0.0/esa-snap/bin/snappy-conf /home/olafd/miniconda3-py39/bin/python
+ 1499  python
+ 1500  exit
+ 1501  cd docker_get_started/workspace/snap-docker/
+ 1502  ll
+ 1503  cd docker/
+ 1504  ll
+ 1505  cat Dockerfile
+ 1506  diff Dockerfile_snap Dockerfile_snap_python
+ 1507  nano -w Dockerfile_snap_python
+ 1508  cp -p Dockerfile_snap_python Dockerfile
+ 1509  nano -w Dockerfile
+ 1510  nano -w Dockerfile_snap_python 
+ 1511  nano -w Dockerfile_snap
+ 1512  nano -w Dockerfile_snap_python 
+ 1513  docker images
+ 1514  h
+ 1515  sudo docker system prune -a
+ 1516  docker build --no-cache --tag docker_snap_python:1 .
+ 1517  cp -p Dockerfile_snap_python Dockerfile
+ 1518  sudo docker build --no-cache --tag docker_snap_python:1 .
+ 1519  nano -w Dockerfile_snap_python 
+ 1520  h
+ 1521  sudo docker run --rm -ti --net=host -p 8888:8888 -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap_python:1
+ 1522  env |grep DISPLAY
+ 1523  export XAUTHORITY=/home/olafd/.Xauthority
+ 1524  sudo docker run --rm -ti --net=host -p 8888:8888 -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap_python:1
+ 1525  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap_python:1
+ 1526  ll
+ 1527  cat Dockerfile_snap
+ 1528  cp -p Dockerfile_snap Dockerfile
+ 1529  h |grep build
+ 1530  sudo docker build --no-cache --tag docker_snap:1 .
+ 1531  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1532  sudo docker build --no-cache --tag docker_snap:1 . > build_docker_snap.log
+ 1533  docker ps
+ 1534  docker images
+ 1535  h |grep system
+ 1536  sudo docker system prune -a
+ 1537  sudo docker build --no-cache --tag docker_snap:1 . & > build_docker_snap.log
+ 1538  sudo docker system prune -a
+ 1539  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1540  sudo docker system prune -a
+ 1541  cp -p Dockerfile_snap Dockerfile
+ 1542  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1543  cat Dockerfile_snap
+ 1544  cat Dockerfile_snap_python 
+ 1545  nano -w Dockerfile_snap
+ 1546  cp -p Dockerfile_snap Dockerfile
+ 1547  sudo docker system prune -a
+ 1548  cp -p Dockerfile_snap Dockerfile
+ 1549  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1550  nano -w Dockerfile_snap
+ 1551  cp -p Dockerfile_snap Dockerfile
+ 1552  sudo docker system prune -a
+ 1553  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1554  nano -w Dockerfile_snap
+ 1555  h
+ 1556  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1557  nano -w Dockerfile_snap
+ 1558  cp -p Dockerfile_snap Dockerfile
+ 1559  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1560  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1561  nano -w Dockerfile_snap
+ 1562  cp -p Dockerfile_snap Dockerfile
+ 1563  sudo docker system prune -a
+ 1564  nano -w Dockerfile_snap
+ 1565  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1566  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1567  sudo docker system prune -a
+ 1568  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1569  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1570  pwd
+ 1571  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1572  sudo docker system prune -a
+ 1573  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1574  docker images
+ 1575  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1576  sudo docker system prune -a
+ 1577  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1578  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+ 1579  sudo docker build --no-cache --tag docker_snap_python:1 . &> build_docker_snap_python.log
+ 1580  h |grep run
+ 1581  sudo docker run --rm -ti --net=host -p 8888:8888 -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap_python:1
+ 1582  sudo docker run --rm -p 8888:8888 docker_snap_python:1
+ 1583  sudo docker system prune -a
+ 1584  sudo docker build --no-cache --tag docker_snap_python:1 . &> build_docker_snap_python.log
+ 1585  docker images
+ 1586  sudo docker run --rm -p 8888:8888 docker_snap_python:1
+ 1587  docker images
+ 1588  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1589  sudo docker build --no-cache --tag docker_snap_python:1 . &> build_docker_snap_python.log
+ 1590  docker images
+ 1591  sudo docker tag docker_snap_python dolaf/docker_snap_python:v1.0
+ 1592  sudo docker tag docker_snap_python:1 dolaf/docker_snap_python:v1.0
+ 1593  sudo docker tag docker_snap:1 dolaf/docker_snap:v1.0
+ 1594  docker images
+ 1595  sudo docker login -u dolaf
+ 1596  sudo docker push dolaf/docker_snap:v1.0
+ 1597  sudo docker push dolaf/docker_snap_python:v1.0
+ 1598  h
+ 1599  ls -la /tmp
+ 1600  ls -ltr /tmp
+ 1601  ls -la
+ 1602  ls -la ~
+ 1603  h
+ 1604  env |grep AUTH
+ 1605  h |grep system
+ 1606  h |grep prune
+ 1607  sudo docker system prune -a
+ 1608  sudo docker pull dolaf/docker_snap_python:v1.0
+ 1609  h
+ 1610  sudo docker run --rm -p 8888:8888 docker_snap_python:v1.0
+ 1611  docker images
+ 1612  sudo docker run --rm -p 8888:8888 dolaf/docker_snap_python:v1.0
+ 1613  sudo docker pull dolaf/docker_snap:v1.0
+ 1614  h
+ 1615  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority dolaf/docker_snap:v1.01
+ 1616  docker images
+ 1617  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority dolaf/docker_snap:v1.0
+ 1618  ll
+ 1619  cd ..
+ 1620  cp -p Dockerfile_snap Dockerfile_snap_WORKS
+ 1621  cd docker/
+ 1622  cp -p Dockerfile_snap Dockerfile_snap_WORKS
+ 1623  ll
+ 1624  rm build_docker_snap.log build_docker_snap_python.log Dockerfile_snap_python_WORKS Dockerfile_snap_WORKS
+ 1625  ll
+ 1626  cd ..
+ 1627  git pull -a
+ 1628  git add docker
+ 1629  git commit -m 'Updated Dockerfile'
+ 1630  git push -a
+ 1631  git push -all
+ 1632  git push --all
+ 1633  exit
+ 1634  cd docker_get_started/workspace/snap-docker/
+ 1635  h
+ 1636  docker ps
+ 1637  docker exec -it 87dff0cfd9f7 /bin/bash
+ 1638  h |grep AUTH
+ 1639  export XAUTHORITY=/home/olafd/.Xauthority
+ 1640  docker exec -it 87dff0cfd9f7 /bin/bash
+ 1641  h |grep DISPLAY
+ 1642  docker ps
+ 1643  docker exec -it 85c082ac72c2 /bin/bash
+ 1644  docker ps
+ 1645  docker exec -it 1c09f8d0deca /bin/bash
+ 1646  ll
+ 1647  cd docker/
+ 1648  ll
+ 1649  cat Dockerfile_snap
+ 1650  cat Dockerfile_snap_python 
+ 1651  ll
+ 1652  tail -f build_docker_snap.log
+ 1653  ll
+ 1654  ps -ef |grep build
+ 1655  kill 30129 30130 30150 30251
+ 1656  kill -9 30129 30130 30150 30251
+ 1657  ps -ef |grep build
+ 1658  kill -9 30129
+ 1659  sudo kill -9 30129
+ 1660  sudo kill -9 30129 30130 30150 30251
+ 1661  ll
+ 1662  tail -f build_docker_snap.log 
+ 1663  ll
+ 1664  cat Dockerfile
+ 1665  nano -w Dockerfile_snap
+ 1666  less build_docker_snap.log 
+ 1667  rm build_docker_snap.log 
+ 1668  tail -f build_docker_snap.log 
+ 1669  rm build_docker_snap.log 
+ 1670  tail -f build_docker_snap.log 
+ 1671  rm build_docker_snap.log 
+ 1672  tail -f build_docker_snap.log 
+ 1673  rm build_docker_snap.log 
+ 1674  tail -f build_docker_snap.log 
+ 1675  rm build_docker_snap.log 
+ 1676  tail -f build_docker_snap.log 
+ 1677  ll
+ 1678  cp -p Dockerfile_snap Dockerfile_snap_WORKS
+ 1679  cat Dockerfile_snap
+ 1680  ll
+ 1681  nano -w Dockerfile_snap
+ 1682  cp -p Dockerfile_snap Dockerfile
+ 1683  rm build_docker_snap.log 
+ 1684  tail -f build_docker_snap.log 
+ 1685  docker ps
+ 1686  nano -w Dockerfile_snap
+ 1687  ct Dockerfile_snap_WORKS 
+ 1688  cat Dockerfile_snap_WORKS 
+ 1689  nano -w Dockerfile_snap
+ 1690  cp -p Dockerfile_snap Dockerfile
+ 1691  rm build_docker_snap.log 
+ 1692  tail -f build_docker_snap.log 
+ 1693  ll
+ 1694  cp -p Dockerfile_snap_WORKS Dockerfile_snap_python
+ 1695  cp -p Dockerfile_snap_WORKS Dockerfile
+ 1696  rm build_docker_snap.log 
+ 1697  tail -f build_docker_snap.log 
+ 1698  ll
+ 1699  cat Dockerfile_snap
+ 1700  cat Dockerfile
+ 1701  ll
+ 1702  cp -p Dockerfile_snap_WORKS Dockerfile_snap
+ 1703  nano -w Dockerfile_snap_python
+ 1704  cp -p Dockerfile_snap_python Dockerfile
+ 1705  tail -f build_docker_snap_python.log 
+ 1706  docker ps
+ 1707  docker exec -it d26de3b022aa /bin/bash
+ 1708  h |grep firefox
+ 1709  firefox http://127.0.0.1:8888/lab?token=72fb8f8b73606f1abc7a9f36b4d4bd877acc0e53eee8693e
+ 1710  ll
+ 1711  cat Dockerfile_snap_python
+ 1712  h
+ 1713  docker exec -it 1c09f8d0deca /bin/bash
+ 1714  docker ps
+ 1715  docker exec -it 83f7beca4dbe /bin/bash
+ 1716  ll
+ 1717  nano -w Dockerfile_snap_python
+ 1718  nano -w Dockerfile_snap
+ 1719  nano -w Dockerfile_snap_python 
+ 1720  nano -w Dockerfile_snap
+ 1721  nano -w Dockerfile_snap_python 
+ 1722  cp -p Dockerfile_snap_python Dockerfile
+ 1723  h
+ 1724  tail -f build_docker_snap.log 
+ 1725  tail -f build_docker_snap_python.log 
+ 1726  firefox http://127.0.0.1:8888/lab?token=4ee20aef48ba0ddccf689786f81a369b911931c5023d059a
+ 1727  cp -p Dockerfile_snap Dockerfile
+ 1728  ll
+ 1729  rm mygdal.tar.gz 
+ 1730  cp -p Dockerfile_snap_python Dockerfile_snap_python_WORKS
+ 1731  ll
+ 1732  docker images
+ 1733  ll
+ 1734  tail -f build_docker_snap.log
+ 1735  less build_docker_snap.log
+ 1736  h
+ 1737  h |grep system
+ 1738  sudo docker system prune -a
+ 1739  ll
+ 1740  rm build_docker_snap.log build_docker_snap_python.log
+ 1741  tail -f build_docker_snap.log
+ 1742  ll
+ 1743  cp -p Dockerfile_snap_python Dockerfile
+ 1744  tail -f build_docker_snap_python.log
+ 1745  docker images
+ 1746  docketr images
+ 1747  docker images
+ 1748  docker ps
+ 1749  h |grep exec
+ 1750  docker exec -it 7c563ef9644b /bin/bash
+ 1751  exit
+ 1752  cd tmp
+ 1753  ll
+ 1754  chmod u+x esa-snap_all_linux-12.0.0.sh
+ 1755  ./esa-snap_all_linux-12.0.0.sh --help
+ 1756  cd
+ 1757  cd docker_get_started/workspace/snap-docker/docker/
+ 1758  ll
+ 1759  cat Dockerfile_snap_WORKS
+ 1760  docker exec -it d26de3b022aa /bin/bash
+ 1761  firefox http://127.0.0.1:8888/lab?token=7b3828894d5165c1beb1433699cacbd397b5b37fc57b8b10
+ 1762  h
+ 1763  h |grep AUTH
+ 1764  env |grep HOME
+ 1765  docker ps
+ 1766  docker exec -it 5d52670872eb /bin/bash
+ 1767  ll
+ 1768  cat Dockerfile
+ 1769  firefox http://127.0.0.1:8888/lab?token=59642a0c8fe1414258b807f42abc6f1e96903224e67a434a
+ 1770  exit
+ 1771  ll
+ 1772  ll snap_11.0.0/
+ 1773  ll snap_12.0.0/
+ 1774  ./snap_12.0.0/esa-snap/bin/snap
+ 1775  xclock
+ 1776  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority dolaf/docker_snap:v1.0
+ 1777  env |grep DISPLAY
+ 1778  export DISPLAY=localhost:10.0
+ 1779  export XAUTHORITY=/home/olafd/.Xauthority
+ 1780  export DISPLAY=localhost:10.0
+ 1781  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority dolaf/docker_snap:v1.0
+ 1782  exit
+ 1783  docker pull quay.io/bcdev/snap-lps25:2
+ 1784  sudo docker pull quay.io/bcdev/snap-lps25:2
+ 1785  exit
+ 1786  cd docker_get_started/workspace/snap-docker/
+ 1787  cd docker/
+ 1788  ll
+ 1789  h
+ 1790  docker images
+ 1791  docker ps
+ 1792  h |grep run
+ 1793  h |grep exec
+ 1794  docker ps
+ 1795  docker exec -it c8afbf18ff02 /bin/bash
+ 1796  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority dolaf/docker_snap:v1.0
+ 1797  ll ~/.X*
+ 1798  env |grep DISPLAY
+ 1799  #%% md
+ 1800  ## **Containerized SNAP Deployment**
+ 1801  #### **Container and Docker Fundamentals**
+ 1802  Docker is a tool that allows developers to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux. The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development. 
+ 1803  Unlike virtual machines, containers do not have high overhead and hence enable more efficient usage of the underlying system and resources.
+ 1804  A comprehensive introduction to Docker and containerization can be found at [Docker Curriculum](https://docker-curriculum.com/).
+ 1805  #### **Create and run a container with Python and SNAP on a Linux host**
+ 1806  As a dedicated use case, the following steps describe how to create, deploy and run a Docker container which contains a Python environment together with a SNAP installation with Snappy/SNAPISTA. In priniple, apart from a slightly different set of installed packages, the Python environment in this container is a 'Docker representation' of the Python kernel with SNAP for CDSE which has been described above. 
+ 1807  The host machine where to run the container can, in principle, be any Linux machine with Docker installed (see below). In ideal case, the machine should provide a desktop environment such as a local Linux desktop computer, or a VM with a GUI which is remotely accessible e.g. via RDP. This would allow to use SNAP/Python in notebooks in a Jupyter Lab environment from a Web browser. This was shown above for CDSE and is also assumed in the steps below. However, within the container the SNAP-Python APIs could also be accessed and used from the command line running a Python prompt or dedicated Python scripts.
+ 1808  ##### ***Terminology***
+ 1809  To create and deploy a *Docker container*, a *Docker image* needs to be built manually or downloaded from a registry such as *Docker Hub*. The image is the blueprint of the application (here: Python, SNAP) and forms the basis of the container. In return, is created from the image by a `docker run` command provided by the Docker installation. 
+ 1810  ##### ***Installation of the Docker software***
+ 1811  The installation of the Docker software is a multi-step procedure and is not described here in detail. A step-by-step guide can again be found at [Docker Curriculum](https://docker-curriculum.com/).
+ 1812  In principle, a Docker installation and creation of images can be done on any machine and not even necessarily on Linux. 
+ 1813  ##### ***Create the Docker image and deploy on a repository***
+ 1814  Docker images are created with a `Dockerfile`, which is a simple text file that contains a list of commands that the Docker client calls while creating an image. These commands are similar or even equivalent to Linux commands.
+ 1815  The `Dockerfile` for creating the image with Python + SNAP running on Ubuntu Linux is simple and looks like this:
+ 1816  ```bash
+ 1817  ######################################################################################
+ 1818  FROM mambaorg/micromamba:ubuntu24.04
+ 1819  COPY --chown=$MAMBA_USER:$MAMBA_USER env.yaml /tmp/env.yaml
+ 1820  RUN micromamba install -y -n base -f /tmp/env.yaml && \
+ 1821      micromamba clean --all --yes
+ 1822  ARG MAMBA_DOCKERFILE_ACTIVATE=1
+ 1823  WORKDIR /home/mambauser
+ 1824  RUN curl -O \
+ 1825      https://download.esa.int/step/snap/12.0/installers/esa-snap_all_linux-12.0.0.sh && \
+ 1826      sh esa-snap_all_linux-12.0.0.sh -q && \
+ 1827      rm esa-snap_all_linux-12.0.0.sh
+ 1828  RUN ./esa-snap/bin/snappy-conf /opt/conda/bin/python
+ 1829  CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser"]
+ 1830  ######################################################################################
+ 1831  ```
+ 1832  exit
+ 1833  cd docker_get_started/workspace/snap-docker/docker/
+ 1834  ll
+ 1835  tail -f build_docker_snap.log
+ 1836  h |grep prune
+ 1837  sudo docker system prune -a
+ 1838  tail -f build_docker_snap.log
+ 1839  h |grep run |grep pyt
+ 1840  docker ps
+ 1841  docker commit e6eeba3ff2c7 quay.io/bcdev/snap12_python
+ 1842  docker push quay.io/bcdev/snap12_python
+ 1843  sudo docker ps
+ 1844  h |grep envs
+ 1845  h |grep bash
+ 1846  h |grep ipynb
+ 1847  docker images
+ 1848  ll ~/snap_12.0.0/esa-snap/
+ 1849  find ~ -name 'snapista-demo-bandmaths.ipynb'
+ 1850  docker cp /home/olafd/miniconda3-py39/lib/python3.9/site-packages/esa_snappy/snapista/demo/snapista-demo-bandmaths.ipynb 9d24382504a0:/home/mambauser/snapista-demo-bandmaths.ipynb
+ 1851  docker ps
+ 1852  docker cp /home/olafd/miniconda3-py39/lib/python3.9/site-packages/esa_snappy/snapista/demo/snapista-demo-bandmaths.ipynb e1abff9ee294:/home/mambauser/snapista-demo-bandmaths.ipynb
+ 1853  firefox http://127.0.0.1:8888/lab?token=093dfd0b68cb0abbd08ece78a764628cc0112544139afd0a
+ 1854  docker cp -R /home/olafd/miniconda3-py39/lib/python3.9/site-packages/esa_snappy/snapista/demo/data e1abff9ee294:/home/mambauser/data
+ 1855  docker cp /home/olafd/miniconda3-py39/lib/python3.9/site-packages/esa_snappy/snapista/demo/data e1abff9ee294:/home/mambauser/data
+ 1856  firefox http://127.0.0.1:8888/lab?token=093dfd0b68cb0abbd08ece78a764628cc0112544139afd0a
+ 1857  tail -f build_docker_snap.log
+ 1858  h
+ 1859  docker ps
+ 1860  docker commit 6aa46a608b0d quay.io/bcdev/snap12
+ 1861  docker push quay.io/bcdev/snap12
+ 1862  exit
+ 1863  cd docker_get_started/workspace/snap-docker/docker/
+ 1864  h |grep bash
+ 1865  docker ps
+ 1866  docker exec -it e1abff9ee294 /bin/bash
+ 1867  man xhost
+ 1868  exit
+ 1869  cd docker_get_started/workspace/snap-docker/
+ 1870  cd docker/
+ 1871  ll
+ 1872  h
+ 1873  docker images
+ 1874  docker login quay.io
+ 1875  docker pull quay.io/bcdev/snap-lps25:2
+ 1876  h
+ 1877  docker images
+ 1878  h |grep run
+ 1879  docker images
+ 1880  h |grep build
+ 1881  ll
+ 1882  sudo docker build --no-cache --tag docker_snap:1 . &> build_docker_snap.log
+ 1883  h |grep run |grep pyt
+ 1884  docker images
+ 1885  sudo docker run --rm -p 8888:8888 docker_snap_python:1
+ 1886  ll
+ 1887  cat Dockerfile
+ 1888  docker images
+ 1889  docker tag docker_snap:1 docker_snap_python:v1.0
+ 1890  docker images
+ 1891  sudo docker run --rm -p 8888:8888 docker_snap_python:v1.0
+ 1892  docker ps
+ 1893  docker images
+ 1894  h |grep prune
+ 1895  sudo docker system prune -a
+ 1896  docker pull quay.io/bcdev/snap12_python
+ 1897  docker images
+ 1898  h |grep run |grep 8888
+ 1899  sudo docker run --rm -p 8888:8888 quay.io/bcdev/snap12_python
+ 1900  docker images
+ 1901  ll
+ 1902  cp -p Dockerfile_snap Dockerfile
+ 1903  h |grep build
+ 1904  sudo docker build --no-cache --tag snap12:1 . &> build_docker_snap.log
+ 1905  docker images
+ 1906  xhost +local:docker
+ 1907  export XAUTHORITY=/home/olafd/.Xauthority
+ 1908  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snap12:1
+ 1909  h
+ 1910  docker images
+ 1911  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snap12:1
+ 1912  docker images
+ 1913  sudo docker system prune -a
+ 1914  docker images
+ 1915  docker pull quay.io/bcdev/snap12
+ 1916  docker images
+ 1917  sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority quay.io/bcdev/snap12
+ 1918  exit
+ 1919  ll
+ 1920  mkdir snap_13.0.0-RC1/
+ 1921  which python
+ 1922  ping 10.1.0.23
+ 1923  ssh olafd@10.1.0.23
+ 1924  ssh olaf@10.1.0.23
+ 1925  df -k
+ 1926  exit
+ 1927  ll
+ 1928  cd tmp
+ 1929  ll
+ 1930  wget https://nexus.snap-ci.ovh/repository/snap-maven-releases/org/esa/snap/installers/snap_sentinel_linux/13.0.0-rc1/snap_sentinel_linux-13.0.0-rc1.sh
+ 1931  chmod u+x snap_sentinel_linux-13.0.0-rc1.sh
+ 1932  ./snap_sentinel_linux-13.0.0-rc1.sh
+ 1933  lsb_release -a
+ 1934  exit
+ 1935  ls -ltr tmp
+ 1936  ll
+ 1937  ll snap_13.0.0-RC1/
+ 1938  ll snap_13.0.0
+ 1939  rm -Rf snap_13.0.0-RC1/
+ 1940  cd tmp
+ 1941  ls -ltr tmp
+ 1942  ls -ltr 
+ 1943  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+ 1944  ll
+ 1945  chmod u+x Miniconda3-latest-Linux-x86_64.sh
+ 1946  ll ..
+ 1947  ./Miniconda3-latest-Linux-x86_64.sh
+ 1948  which python
+ 1949  cd
+ 1950  ll
+ 1951  ./snap_13.0.0/esa-snap/bin/snappy-conf /home/olafd/miniconda3_py313/bin/python
+ 1952  /home/olafd/miniconda3_py313/bin/python -m pip install esa_snappy
+ 1953  ./snap_13.0.0/esa-snap/bin/snappy-conf /home/olafd/miniconda3_py313/bin/python
+ 1954  /home/olafd/miniconda3_py313/bin/python
+ 1955  exit
+ 1956  ll
+ 1957  cd snap_13.0.0/esa-snap/bin/
+ 1958  snap
+ 1959  ./snap
+ 1960  cd
+ 1961  cd tmp
+ 1962  cd
+ 1963  rm -Rf .snap/*
+ 1964  cd tmp
+ 1965  ls -ltr
+ 1966  ./snap_sentinel_linux-13.0.0-rc1.sh
+ 1967  h |grep wget
+ 1968  wget https://download.esa.int/step/snap/11.0/installers/esa-snap_all_linux-11.0.0.sh
+ 1969  chmod u+x esa-snap_all_linux-11.0.0.sh
+ 1970  ./esa-snap_all_linux-11.0.0.sh
+ 1971  exit
+ 1972  ll
+ 1973  rm -Rf snap_12.0.0-RC1/
+ 1974  rm -Rf snap_12.0.0-SNAPSHOT/
+ 1975  ll snap_13.0.0/
+ 1976  cd tmp
+ 1977  wget https://nexus.snap-ci.ovh/repository/snap-maven-releases/org/esa/snap/installers/snap_all_linux/13.0.0/snap_all_linux-13.0.0.sh
+ 1978  ls -ltr
+ 1979  chmod u+x snap_all_linux-13.0.0.sh
+ 1980  pwd
+ 1981  ll ../snap*
+ 1982  ll ~
+ 1983  ls -ltr *.sh
+ 1984  pwd
+ 1985  ./snap_all_linux-13.0.0.sh
+ 1986  uname -n
+ 1987  cd ..
+ 1988  which python
+ 1989  h |grep snappy
+ 1990  pwd
+ 1991  /home/olafd/miniconda3_py313/bin/python -m pip install esa_snappy
+ 1992  ./snap_13.0.0/esa-snap/bin/snappy-conf /home/olafd/miniconda3_py313/bin/python
+ 1993  exit
+ 1994  /home/olafd/miniconda3_py313/bin/python
+ 1995  exit
+ 1996  cd docker_get_started/
+ 1997  ll
+ 1998  cd workspace/snap-docker/docker/
+ 1999  ll
+ 2000  tail -f build_docker_snap13_python.log
+ 2001  ll
+ 2002  tail -f build_docker_snap13_python.log
+ 2003  tail -f build_docker_snap13.log
+ 2004  docker images
+ 2005  docker ps
+ 2006  docker commit e8e55e588415 quay.io/bcdev/snap13_python
+ 2007  docker push quay.io/bcdev/snap13_python
+ 2008  docker ps
+ 2009  docker commit d73750884373 quay.io/bcdev/snap13
+ 2010  docker push quay.io/bcdev/snap13
+ 2011  h
+ 2012  h > history_20251121.txt
