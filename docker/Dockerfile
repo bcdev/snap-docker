@@ -18,6 +18,10 @@ RUN curl -O \
     sh esa-snap_all_linux-13.0.0.sh -q && \
     rm esa-snap_all_linux-13.0.0.sh
 
+RUN ./esa-snap/bin/snap --nosplash --nogui --modules --list --refresh
+
+RUN ./esa-snap/bin/snap --nosplash --nogui --modules --update-all
+
 RUN ./esa-snap/bin/snappy-conf /opt/conda/bin/python
 
 CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser"]
