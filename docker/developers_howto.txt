@@ -1,0 +1,13 @@
+# upload container to quay.io:
+    - 'docker login' (user bcdev-2 with known pw)
+    - start the container to be uploaded (here: snap13_python) with dedicated  'docker run...' command
+    - 'docker ps'
+    - 'docker commit <container ID> quay.io/bcdev/snap13_python'
+    - 'docker push quay.io/bcdev/snap13_python'
+
+    On quay.io the push is automatically moved into 'latest' tag. Tag history, usage logs etc. can be followed
+    on quay.io web interface (login as bcdev-2 required)
+
+# download container from quay.io:
+    - 'docker pull quay.io/bcdev/snap13_python' (by any user, no login required)
+    - after download, the image is visible with 'docker images'
