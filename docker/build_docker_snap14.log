@@ -1,0 +1,1113 @@
+#1 [internal] load build definition from Dockerfile_snap
+#1 transferring dockerfile: 1.36kB done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/mambaorg/micromamba:ubuntu26.04
+#3 DONE 0.6s
+
+#4 [1/6] FROM docker.io/mambaorg/micromamba:ubuntu26.04@sha256:56629ad215131d12da698a88f9819c3a9262249905ba6ec35a2daf55c0ca5853
+#4 DONE 0.0s
+
+#5 [2/6] WORKDIR /home/mambauser
+#5 CACHED
+
+#6 [3/6] RUN apt-get -qq update && apt-get -qq install -y curl xauth x11-apps libxtst6 libxxf86vm1
+#6 17.72 debconf: unable to initialize frontend: Dialog
+#6 17.72 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 17.72 debconf: falling back to frontend: Readline
+#6 17.72 debconf: unable to initialize frontend: Readline
+#6 17.72 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 80.)
+#6 17.72 debconf: falling back to frontend: Teletype
+#6 17.73 debconf: unable to initialize frontend: Teletype
+#6 17.73 debconf: (This frontend requires a controlling tty.)
+#6 17.73 debconf: falling back to frontend: Noninteractive
+#6 21.17 Preconfiguring packages ...
+#6 21.75 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7724 files and directories currently installed.)
+#6 21.76 Preparing to unpack .../libblkid1_2.41.3-3ubuntu2.2_amd64.deb ...
+#6 21.99 Unpacking libblkid1:amd64 (2.41.3-3ubuntu2.2) over (2.41.3-3ubuntu2) ...
+#6 22.21 Setting up libblkid1:amd64 (2.41.3-3ubuntu2.2) ...
+#6 22.31 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7724 files and directories currently installed.)
+#6 22.32 Preparing to unpack .../libmount1_2.41.3-3ubuntu2.2_amd64.deb ...
+#6 22.35 Unpacking libmount1:amd64 (2.41.3-3ubuntu2.2) over (2.41.3-3ubuntu2) ...
+#6 22.56 Setting up libmount1:amd64 (2.41.3-3ubuntu2.2) ...
+#6 22.79 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7724 files and directories currently installed.)
+#6 22.80 Preparing to unpack .../libsmartcols1_2.41.3-3ubuntu2.2_amd64.deb ...
+#6 22.83 Unpacking libsmartcols1:amd64 (2.41.3-3ubuntu2.2) over (2.41.3-3ubuntu2) ...
+#6 23.02 Setting up libsmartcols1:amd64 (2.41.3-3ubuntu2.2) ...
+#6 23.08 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7724 files and directories currently installed.)
+#6 23.08 Preparing to unpack .../mount_2.41.3-3ubuntu2.2_amd64.deb ...
+#6 23.11 Unpacking mount (2.41.3-3ubuntu2.2) over (2.41.3-3ubuntu2) ...
+#6 23.27 Preparing to unpack .../libuuid1_2.41.3-3ubuntu2.2_amd64.deb ...
+#6 23.29 Unpacking libuuid1:amd64 (2.41.3-3ubuntu2.2) over (2.41.3-3ubuntu2) ...
+#6 23.37 Setting up libuuid1:amd64 (2.41.3-3ubuntu2.2) ...
+#6 23.50 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7724 files and directories currently installed.)
+#6 23.50 Preparing to unpack .../util-linux_2.41.3-3ubuntu2.2_amd64.deb ...
+#6 23.54 Unpacking util-linux (2.41.3-3ubuntu2.2) over (2.41.3-3ubuntu2) ...
+#6 27.89 Setting up util-linux (2.41.3-3ubuntu2.2) ...
+#6 28.20 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7724 files and directories currently installed.)
+#6 28.20 Preparing to unpack .../00-login_1%3a4.16.0-2+really2.41.3-3ubuntu2.2_amd64.deb ...
+#6 28.26 Unpacking login (1:4.16.0-2+really2.41.3-3ubuntu2.2) over (1:4.16.0-2+really2.41.3-3ubuntu2) ...
+#6 28.40 Selecting previously unselected package libexpat1:amd64.
+#6 28.40 Preparing to unpack .../01-libexpat1_2.7.4-1ubuntu0.2_amd64.deb ...
+#6 28.41 Unpacking libexpat1:amd64 (2.7.4-1ubuntu0.2) ...
+#6 28.47 Preparing to unpack .../02-bsdutils_1%3a2.41.3-3ubuntu2.2_amd64.deb ...
+#6 28.50 Unpacking bsdutils (1:2.41.3-3ubuntu2.2) over (1:2.41.3-3ubuntu2) ...
+#6 28.65 Selecting previously unselected package openssl.
+#6 28.65 Preparing to unpack .../03-openssl_3.5.5-1ubuntu3.5_amd64.deb ...
+#6 28.66 Unpacking openssl (3.5.5-1ubuntu3.5) ...
+#6 28.75 Selecting previously unselected package ca-certificates.
+#6 28.75 Preparing to unpack .../04-ca-certificates_20260601~26.04.1_all.deb ...
+#6 28.77 Unpacking ca-certificates (20260601~26.04.1) ...
+#6 28.90 Selecting previously unselected package krb5-locales.
+#6 28.90 Preparing to unpack .../05-krb5-locales_1.22.1-2ubuntu4.1_all.deb ...
+#6 28.91 Unpacking krb5-locales (1.22.1-2ubuntu4.1) ...
+#6 28.97 Selecting previously unselected package libffi8:amd64.
+#6 28.97 Preparing to unpack .../06-libffi8_3.5.2-4_amd64.deb ...
+#6 28.98 Unpacking libffi8:amd64 (3.5.2-4) ...
+#6 29.07 Selecting previously unselected package libnettle8t64:amd64.
+#6 29.07 Preparing to unpack .../07-libnettle8t64_3.10.2-1_amd64.deb ...
+#6 29.08 Unpacking libnettle8t64:amd64 (3.10.2-1) ...
+#6 29.17 Selecting previously unselected package libhogweed6t64:amd64.
+#6 29.17 Preparing to unpack .../08-libhogweed6t64_3.10.2-1_amd64.deb ...
+#6 29.18 Unpacking libhogweed6t64:amd64 (3.10.2-1) ...
+#6 29.27 Selecting previously unselected package libunistring5:amd64.
+#6 29.28 Preparing to unpack .../09-libunistring5_1.3-2build1_amd64.deb ...
+#6 29.28 Unpacking libunistring5:amd64 (1.3-2build1) ...
+#6 29.37 Selecting previously unselected package libidn2-0:amd64.
+#6 29.38 Preparing to unpack .../10-libidn2-0_2.3.8-4build1_amd64.deb ...
+#6 29.38 Unpacking libidn2-0:amd64 (2.3.8-4build1) ...
+#6 29.45 Selecting previously unselected package libp11-kit0:amd64.
+#6 29.45 Preparing to unpack .../11-libp11-kit0_0.26.2-2_amd64.deb ...
+#6 29.47 Unpacking libp11-kit0:amd64 (0.26.2-2) ...
+#6 29.57 Selecting previously unselected package libtasn1-6:amd64.
+#6 29.57 Preparing to unpack .../12-libtasn1-6_4.21.0-2_amd64.deb ...
+#6 29.59 Unpacking libtasn1-6:amd64 (4.21.0-2) ...
+#6 29.73 Selecting previously unselected package libgnutls30t64:amd64.
+#6 29.74 Preparing to unpack .../13-libgnutls30t64_3.8.12-2ubuntu1.1_amd64.deb ...
+#6 29.75 Unpacking libgnutls30t64:amd64 (3.8.12-2ubuntu1.1) ...
+#6 29.89 Selecting previously unselected package libkrb5support0:amd64.
+#6 29.89 Preparing to unpack .../14-libkrb5support0_1.22.1-2ubuntu4.1_amd64.deb ...
+#6 29.93 Unpacking libkrb5support0:amd64 (1.22.1-2ubuntu4.1) ...
+#6 30.05 Selecting previously unselected package libk5crypto3:amd64.
+#6 30.05 Preparing to unpack .../15-libk5crypto3_1.22.1-2ubuntu4.1_amd64.deb ...
+#6 30.07 Unpacking libk5crypto3:amd64 (1.22.1-2ubuntu4.1) ...
+#6 30.68 Selecting previously unselected package libkeyutils1:amd64.
+#6 30.68 Preparing to unpack .../16-libkeyutils1_1.6.3-6ubuntu3_amd64.deb ...
+#6 31.01 Unpacking libkeyutils1:amd64 (1.6.3-6ubuntu3) ...
+#6 31.09 Selecting previously unselected package libkrb5-3:amd64.
+#6 31.09 Preparing to unpack .../17-libkrb5-3_1.22.1-2ubuntu4.1_amd64.deb ...
+#6 31.26 Unpacking libkrb5-3:amd64 (1.22.1-2ubuntu4.1) ...
+#6 33.32 Selecting previously unselected package libgssapi-krb5-2:amd64.
+#6 33.32 Preparing to unpack .../18-libgssapi-krb5-2_1.22.1-2ubuntu4.1_amd64.deb ...
+#6 33.41 Unpacking libgssapi-krb5-2:amd64 (1.22.1-2ubuntu4.1) ...
+#6 34.64 Selecting previously unselected package bash-completion.
+#6 34.65 Preparing to unpack .../19-bash-completion_1%3a2.16.0-8build1_all.deb ...
+#6 34.66 Unpacking bash-completion (1:2.16.0-8build1) ...
+#6 34.85 Selecting previously unselected package bsdextrautils.
+#6 34.85 Preparing to unpack .../20-bsdextrautils_2.41.3-3ubuntu2.2_amd64.deb ...
+#6 34.86 Unpacking bsdextrautils (2.41.3-3ubuntu2.2) ...
+#6 34.97 Selecting previously unselected package libuchardet0:amd64.
+#6 34.97 Preparing to unpack .../21-libuchardet0_0.0.8-2_amd64.deb ...
+#6 34.98 Unpacking libuchardet0:amd64 (0.0.8-2) ...
+#6 35.09 Selecting previously unselected package groff-base.
+#6 35.09 Preparing to unpack .../22-groff-base_1.23.0-10_amd64.deb ...
+#6 35.10 Unpacking groff-base (1.23.0-10) ...
+#6 35.29 Selecting previously unselected package libgdbm6t64:amd64.
+#6 35.29 Preparing to unpack .../23-libgdbm6t64_1.26-1build1_amd64.deb ...
+#6 35.30 Unpacking libgdbm6t64:amd64 (1.26-1build1) ...
+#6 35.37 Selecting previously unselected package libnghttp2-14:amd64.
+#6 35.37 Preparing to unpack .../24-libnghttp2-14_1.68.0-2ubuntu0.2_amd64.deb ...
+#6 35.38 Unpacking libnghttp2-14:amd64 (1.68.0-2ubuntu0.2) ...
+#6 35.48 Selecting previously unselected package libpipeline1:amd64.
+#6 35.48 Preparing to unpack .../25-libpipeline1_1.5.8-2_amd64.deb ...
+#6 35.49 Unpacking libpipeline1:amd64 (1.5.8-2) ...
+#6 35.57 Selecting previously unselected package libpng16-16t64:amd64.
+#6 35.58 Preparing to unpack .../26-libpng16-16t64_1.6.57-1_amd64.deb ...
+#6 35.59 Unpacking libpng16-16t64:amd64 (1.6.57-1) ...
+#6 35.67 Selecting previously unselected package libpsl5t64:amd64.
+#6 35.67 Preparing to unpack .../27-libpsl5t64_0.21.2-1.1build2_amd64.deb ...
+#6 35.68 Unpacking libpsl5t64:amd64 (0.21.2-1.1build2) ...
+#6 35.75 Selecting previously unselected package libxau6:amd64.
+#6 35.75 Preparing to unpack .../28-libxau6_1%3a1.0.11-1build2_amd64.deb ...
+#6 35.76 Unpacking libxau6:amd64 (1:1.0.11-1build2) ...
+#6 35.83 Selecting previously unselected package libxdmcp6:amd64.
+#6 35.84 Preparing to unpack .../29-libxdmcp6_1%3a1.1.5-2_amd64.deb ...
+#6 35.84 Unpacking libxdmcp6:amd64 (1:1.1.5-2) ...
+#6 35.93 Selecting previously unselected package libxcb1:amd64.
+#6 35.93 Preparing to unpack .../30-libxcb1_1.17.0-2ubuntu1_amd64.deb ...
+#6 35.94 Unpacking libxcb1:amd64 (1.17.0-2ubuntu1) ...
+#6 36.00 Selecting previously unselected package libx11-data.
+#6 36.00 Preparing to unpack .../31-libx11-data_2%3a1.8.13-1_all.deb ...
+#6 36.00 Unpacking libx11-data (2:1.8.13-1) ...
+#6 36.11 Selecting previously unselected package libx11-6:amd64.
+#6 36.11 Preparing to unpack .../32-libx11-6_2%3a1.8.13-1_amd64.deb ...
+#6 36.12 Unpacking libx11-6:amd64 (2:1.8.13-1) ...
+#6 36.20 Selecting previously unselected package libxext6:amd64.
+#6 36.20 Preparing to unpack .../33-libxext6_2%3a1.3.4-1build3_amd64.deb ...
+#6 36.21 Unpacking libxext6:amd64 (2:1.3.4-1build3) ...
+#6 36.29 Selecting previously unselected package libxmuu1:amd64.
+#6 36.29 Preparing to unpack .../34-libxmuu1_2%3a1.1.3-4_amd64.deb ...
+#6 36.30 Unpacking libxmuu1:amd64 (2:1.1.3-4) ...
+#6 36.42 Selecting previously unselected package man-db.
+#6 36.42 Preparing to unpack .../35-man-db_2.13.1-1build1_amd64.deb ...
+#6 36.43 Unpacking man-db (2.13.1-1build1) ...
+#6 36.56 Selecting previously unselected package publicsuffix.
+#6 36.56 Preparing to unpack .../36-publicsuffix_20260129.1928-1_all.deb ...
+#6 36.58 Unpacking publicsuffix (20260129.1928-1) ...
+#6 36.66 Selecting previously unselected package xauth.
+#6 36.66 Preparing to unpack .../37-xauth_1%3a1.1.2-1.1build1_amd64.deb ...
+#6 36.68 Unpacking xauth (1:1.1.2-1.1build1) ...
+#6 36.79 Selecting previously unselected package libbrotli1:amd64.
+#6 36.79 Preparing to unpack .../38-libbrotli1_1.2.0-3build1_amd64.deb ...
+#6 36.80 Unpacking libbrotli1:amd64 (1.2.0-3build1) ...
+#6 36.86 Selecting previously unselected package libsasl2-modules-db:amd64.
+#6 36.86 Preparing to unpack .../39-libsasl2-modules-db_2.1.28+dfsg1-9ubuntu3_amd64.deb ...
+#6 36.87 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+#6 36.95 Selecting previously unselected package libsasl2-2:amd64.
+#6 36.95 Preparing to unpack .../40-libsasl2-2_2.1.28+dfsg1-9ubuntu3_amd64.deb ...
+#6 36.96 Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+#6 37.04 Selecting previously unselected package libldap-common.
+#6 37.04 Preparing to unpack .../41-libldap-common_2.6.10+dfsg-1ubuntu5_all.deb ...
+#6 37.05 Unpacking libldap-common (2.6.10+dfsg-1ubuntu5) ...
+#6 37.13 Selecting previously unselected package libldap2:amd64.
+#6 37.13 Preparing to unpack .../42-libldap2_2.6.10+dfsg-1ubuntu5_amd64.deb ...
+#6 37.14 Unpacking libldap2:amd64 (2.6.10+dfsg-1ubuntu5) ...
+#6 37.20 Selecting previously unselected package librtmp1:amd64.
+#6 37.20 Preparing to unpack .../43-librtmp1_2.4+20151223.gitfa8646d.1-3_amd64.deb ...
+#6 37.21 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-3) ...
+#6 38.64 Selecting previously unselected package libssh2-1t64:amd64.
+#6 38.64 Preparing to unpack .../44-libssh2-1t64_1.11.1-1ubuntu0.26.04.4_amd64.deb ...
+#6 38.91 Unpacking libssh2-1t64:amd64 (1.11.1-1ubuntu0.26.04.4) ...
+#6 39.00 Selecting previously unselected package libcurl4t64:amd64.
+#6 39.00 Preparing to unpack .../45-libcurl4t64_8.18.0-1ubuntu2.5_amd64.deb ...
+#6 39.01 Unpacking libcurl4t64:amd64 (8.18.0-1ubuntu2.5) ...
+#6 39.07 Selecting previously unselected package curl.
+#6 39.07 Preparing to unpack .../46-curl_8.18.0-1ubuntu2.5_amd64.deb ...
+#6 39.08 Unpacking curl (8.18.0-1ubuntu2.5) ...
+#6 39.16 Selecting previously unselected package fonts-dejavu-mono.
+#6 39.17 Preparing to unpack .../47-fonts-dejavu-mono_2.37-8build1_all.deb ...
+#6 39.17 Unpacking fonts-dejavu-mono (2.37-8build1) ...
+#6 39.28 Selecting previously unselected package fonts-dejavu-core.
+#6 39.28 Preparing to unpack .../48-fonts-dejavu-core_2.37-8build1_all.deb ...
+#6 39.31 Unpacking fonts-dejavu-core (2.37-8build1) ...
+#6 39.41 Selecting previously unselected package fontconfig-config.
+#6 39.41 Preparing to unpack .../49-fontconfig-config_2.17.1-3ubuntu1_amd64.deb ...
+#6 39.66 Unpacking fontconfig-config (2.17.1-3ubuntu1) ...
+#6 39.75 Selecting previously unselected package libfreetype6:amd64.
+#6 39.75 Preparing to unpack .../50-libfreetype6_2.14.2+dfsg-1ubuntu0.1_amd64.deb ...
+#6 39.76 Unpacking libfreetype6:amd64 (2.14.2+dfsg-1ubuntu0.1) ...
+#6 39.85 Selecting previously unselected package libfontconfig1:amd64.
+#6 39.86 Preparing to unpack .../51-libfontconfig1_2.17.1-3ubuntu1_amd64.deb ...
+#6 39.86 Unpacking libfontconfig1:amd64 (2.17.1-3ubuntu1) ...
+#6 39.95 Selecting previously unselected package x11-common.
+#6 39.95 Preparing to unpack .../52-x11-common_1%3a7.7+26ubuntu1_all.deb ...
+#6 39.96 Unpacking x11-common (1:7.7+26ubuntu1) ...
+#6 40.03 Selecting previously unselected package libice6:amd64.
+#6 40.03 Preparing to unpack .../53-libice6_2%3a1.1.1-1build1_amd64.deb ...
+#6 40.04 Unpacking libice6:amd64 (2:1.1.1-1build1) ...
+#6 40.11 Selecting previously unselected package libsasl2-modules:amd64.
+#6 40.11 Preparing to unpack .../54-libsasl2-modules_2.1.28+dfsg1-9ubuntu3_amd64.deb ...
+#6 40.13 Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+#6 40.22 Selecting previously unselected package libsm6:amd64.
+#6 40.22 Preparing to unpack .../55-libsm6_2%3a1.2.6-1build1_amd64.deb ...
+#6 40.23 Unpacking libsm6:amd64 (2:1.2.6-1build1) ...
+#6 40.40 Selecting previously unselected package libx11-xcb1:amd64.
+#6 40.40 Preparing to unpack .../56-libx11-xcb1_2%3a1.8.13-1_amd64.deb ...
+#6 40.43 Unpacking libx11-xcb1:amd64 (2:1.8.13-1) ...
+#6 41.01 Selecting previously unselected package libxt6t64:amd64.
+#6 41.01 Preparing to unpack .../57-libxt6t64_1%3a1.2.1-1.3build1_amd64.deb ...
+#6 41.17 Unpacking libxt6t64:amd64 (1:1.2.1-1.3build1) ...
+#6 41.96 Selecting previously unselected package libxmu6:amd64.
+#6 41.96 Preparing to unpack .../58-libxmu6_2%3a1.1.3-4_amd64.deb ...
+#6 42.00 Unpacking libxmu6:amd64 (2:1.1.3-4) ...
+#6 42.82 Selecting previously unselected package libxpm4:amd64.
+#6 42.82 Preparing to unpack .../59-libxpm4_1%3a3.5.17-1ubuntu0.26.04.1_amd64.deb ...
+#6 43.64 Unpacking libxpm4:amd64 (1:3.5.17-1ubuntu0.26.04.1) ...
+#6 45.20 Selecting previously unselected package libxaw7:amd64.
+#6 45.20 Preparing to unpack .../60-libxaw7_2%3a1.0.16-1build1_amd64.deb ...
+#6 45.21 Unpacking libxaw7:amd64 (2:1.0.16-1build1) ...
+#6 45.31 Selecting previously unselected package libxcb-damage0:amd64.
+#6 45.31 Preparing to unpack .../61-libxcb-damage0_1.17.0-2ubuntu1_amd64.deb ...
+#6 45.32 Unpacking libxcb-damage0:amd64 (1.17.0-2ubuntu1) ...
+#6 45.44 Selecting previously unselected package libxcb-present0:amd64.
+#6 45.44 Preparing to unpack .../62-libxcb-present0_1.17.0-2ubuntu1_amd64.deb ...
+#6 45.46 Unpacking libxcb-present0:amd64 (1.17.0-2ubuntu1) ...
+#6 45.54 Selecting previously unselected package libxcb-xfixes0:amd64.
+#6 45.54 Preparing to unpack .../63-libxcb-xfixes0_1.17.0-2ubuntu1_amd64.deb ...
+#6 45.55 Unpacking libxcb-xfixes0:amd64 (1.17.0-2ubuntu1) ...
+#6 46.11 Selecting previously unselected package libxfixes3:amd64.
+#6 46.12 Preparing to unpack .../64-libxfixes3_1%3a6.0.0-2build2_amd64.deb ...
+#6 46.13 Unpacking libxfixes3:amd64 (1:6.0.0-2build2) ...
+#6 46.22 Selecting previously unselected package libxrender1:amd64.
+#6 46.22 Preparing to unpack .../65-libxrender1_1%3a0.9.12-1build1_amd64.deb ...
+#6 46.24 Unpacking libxrender1:amd64 (1:0.9.12-1build1) ...
+#6 46.31 Selecting previously unselected package libxcursor1:amd64.
+#6 46.31 Preparing to unpack .../66-libxcursor1_1%3a1.2.3-1build1_amd64.deb ...
+#6 46.51 Unpacking libxcursor1:amd64 (1:1.2.3-1build1) ...
+#6 46.57 Selecting previously unselected package libxft2:amd64.
+#6 46.57 Preparing to unpack .../67-libxft2_2.3.6-1build2_amd64.deb ...
+#6 46.58 Unpacking libxft2:amd64 (2.3.6-1build2) ...
+#6 46.66 Selecting previously unselected package libxi6:amd64.
+#6 46.66 Preparing to unpack .../68-libxi6_2%3a1.8.2-2_amd64.deb ...
+#6 46.67 Unpacking libxi6:amd64 (2:1.8.2-2) ...
+#6 46.76 Selecting previously unselected package libxkbfile1:amd64.
+#6 46.76 Preparing to unpack .../69-libxkbfile1_1%3a1.1.0-1build5_amd64.deb ...
+#6 46.77 Unpacking libxkbfile1:amd64 (1:1.1.0-1build5) ...
+#6 46.86 Selecting previously unselected package libxtst6:amd64.
+#6 46.86 Preparing to unpack .../70-libxtst6_2%3a1.2.5-1build1_amd64.deb ...
+#6 46.87 Unpacking libxtst6:amd64 (2:1.2.5-1build1) ...
+#6 47.13 Selecting previously unselected package libxxf86vm1:amd64.
+#6 47.14 Preparing to unpack .../71-libxxf86vm1_1%3a1.1.4-2_amd64.deb ...
+#6 47.15 Unpacking libxxf86vm1:amd64 (1:1.1.4-2) ...
+#6 47.22 Selecting previously unselected package x11-apps.
+#6 47.22 Preparing to unpack .../72-x11-apps_7.7+11build4_amd64.deb ...
+#6 47.23 Unpacking x11-apps (7.7+11build4) ...
+#6 47.31 Selecting previously unselected package xbitmaps.
+#6 47.31 Preparing to unpack .../73-xbitmaps_1.1.1-2.2build1_all.deb ...
+#6 47.32 Unpacking xbitmaps (1.1.1-2.2build1) ...
+#6 47.41 Setting up libexpat1:amd64 (2.7.4-1ubuntu0.2) ...
+#6 47.45 Setting up libpipeline1:amd64 (1.5.8-2) ...
+#6 47.58 Setting up libxau6:amd64 (1:1.0.11-1build2) ...
+#6 48.17 Setting up libxdmcp6:amd64 (1:1.1.5-2) ...
+#6 48.76 Setting up libkeyutils1:amd64 (1.6.3-6ubuntu3) ...
+#6 50.00 Setting up libxcb1:amd64 (1.17.0-2ubuntu1) ...
+#6 50.78 Setting up libxcb-xfixes0:amd64 (1.17.0-2ubuntu1) ...
+#6 50.80 Setting up libgdbm6t64:amd64 (1.26-1build1) ...
+#6 50.84 Setting up bsdextrautils (2.41.3-3ubuntu2.2) ...
+#6 50.85 Setting up bsdutils (1:2.41.3-3ubuntu2.2) ...
+#6 50.97 Setting up libbrotli1:amd64 (1.2.0-3build1) ...
+#6 51.01 Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+#6 51.12 Setting up x11-common (1:7.7+26ubuntu1) ...
+#6 51.40 debconf: unable to initialize frontend: Dialog
+#6 51.40 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 51.40 debconf: falling back to frontend: Readline
+#6 51.40 debconf: unable to initialize frontend: Readline
+#6 51.40 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+#6 51.40 debconf: falling back to frontend: Teletype
+#6 51.41 debconf: unable to initialize frontend: Teletype
+#6 51.41 debconf: (This frontend requires a controlling tty.)
+#6 51.41 debconf: falling back to frontend: Noninteractive
+#6 51.43 invoke-rc.d: could not determine current runlevel
+#6 51.43 invoke-rc.d: policy-rc.d denied execution of start.
+#6 51.45 Setting up libnghttp2-14:amd64 (1.68.0-2ubuntu0.2) ...
+#6 51.48 Setting up krb5-locales (1.22.1-2ubuntu4.1) ...
+#6 51.51 Setting up libldap-common (2.6.10+dfsg-1ubuntu5) ...
+#6 51.55 Setting up libkrb5support0:amd64 (1.22.1-2ubuntu4.1) ...
+#6 51.68 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+#6 51.71 Setting up libxcb-present0:amd64 (1.17.0-2ubuntu1) ...
+#6 51.74 Setting up libnettle8t64:amd64 (3.10.2-1) ...
+#6 51.76 Setting up libx11-data (2:1.8.13-1) ...
+#6 51.79 Setting up bash-completion (1:2.16.0-8build1) ...
+#6 51.84 Setting up libunistring5:amd64 (1.3-2build1) ...
+#6 51.86 Setting up fonts-dejavu-mono (2.37-8build1) ...
+#6 51.94 Setting up libpng16-16t64:amd64 (1.6.57-1) ...
+#6 51.97 Setting up fonts-dejavu-core (2.37-8build1) ...
+#6 52.14 Setting up libk5crypto3:amd64 (1.22.1-2ubuntu4.1) ...
+#6 52.17 Setting up libsasl2-2:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+#6 52.19 Setting up libffi8:amd64 (3.5.2-4) ...
+#6 52.22 Setting up libhogweed6t64:amd64 (3.10.2-1) ...
+#6 52.25 Setting up mount (2.41.3-3ubuntu2.2) ...
+#6 52.27 Setting up libuchardet0:amd64 (0.0.8-2) ...
+#6 52.30 Setting up libtasn1-6:amd64 (4.21.0-2) ...
+#6 52.33 Setting up libx11-6:amd64 (2:1.8.13-1) ...
+#6 52.36 Setting up libkrb5-3:amd64 (1.22.1-2ubuntu4.1) ...
+#6 52.39 Setting up libxkbfile1:amd64 (1:1.1.0-1build5) ...
+#6 52.42 Setting up libssh2-1t64:amd64 (1.11.1-1ubuntu0.26.04.4) ...
+#6 52.44 Setting up openssl (3.5.5-1ubuntu3.5) ...
+#6 52.47 Setting up publicsuffix (20260129.1928-1) ...
+#6 52.49 Setting up libldap2:amd64 (2.6.10+dfsg-1ubuntu5) ...
+#6 52.51 Setting up libxmuu1:amd64 (2:1.1.3-4) ...
+#6 52.53 Setting up xbitmaps (1.1.1-2.2build1) ...
+#6 52.55 Setting up libxcb-damage0:amd64 (1.17.0-2ubuntu1) ...
+#6 52.57 Setting up login (1:4.16.0-2+really2.41.3-3ubuntu2.2) ...
+#6 52.64 Setting up libx11-xcb1:amd64 (2:1.8.13-1) ...
+#6 52.66 Setting up libice6:amd64 (2:1.1.1-1build1) ...
+#6 52.68 Setting up libxpm4:amd64 (1:3.5.17-1ubuntu0.26.04.1) ...
+#6 52.71 Setting up libxrender1:amd64 (1:0.9.12-1build1) ...
+#6 52.73 Setting up fontconfig-config (2.17.1-3ubuntu1) ...
+#6 53.06 Setting up libxext6:amd64 (2:1.3.4-1build3) ...
+#6 53.18 Setting up libidn2-0:amd64 (2.3.8-4build1) ...
+#6 53.20 Setting up libxxf86vm1:amd64 (1:1.1.4-2) ...
+#6 53.23 Setting up ca-certificates (20260601~26.04.1) ...
+#6 53.34 debconf: unable to initialize frontend: Dialog
+#6 53.34 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 53.34 debconf: falling back to frontend: Readline
+#6 53.34 debconf: unable to initialize frontend: Readline
+#6 53.34 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+#6 53.34 debconf: falling back to frontend: Teletype
+#6 53.35 debconf: unable to initialize frontend: Teletype
+#6 53.35 debconf: (This frontend requires a controlling tty.)
+#6 53.35 debconf: falling back to frontend: Noninteractive
+#6 53.74 Updating certificates in /etc/ssl/certs...
+#6 55.06 rehash: warning: skipping ca-certificates.crt, it does not contain exactly one certificate or CRL
+#6 55.07 121 added, 0 removed; done.
+#6 56.03 Setting up libfreetype6:amd64 (2.14.2+dfsg-1ubuntu0.1) ...
+#6 56.36 Setting up libxfixes3:amd64 (1:6.0.0-2build2) ...
+#6 56.39 Setting up libp11-kit0:amd64 (0.26.2-2) ...
+#6 56.42 Setting up libgssapi-krb5-2:amd64 (1.22.1-2ubuntu4.1) ...
+#6 56.59 Setting up xauth (1:1.1.2-1.1build1) ...
+#6 56.81 Setting up groff-base (1.23.0-10) ...
+#6 57.10 Setting up libfontconfig1:amd64 (2.17.1-3ubuntu1) ...
+#6 57.13 Setting up libsm6:amd64 (2:1.2.6-1build1) ...
+#6 57.16 Setting up libgnutls30t64:amd64 (3.8.12-2ubuntu1.1) ...
+#6 57.20 Setting up libxft2:amd64 (2.3.6-1build2) ...
+#6 57.23 Setting up libxi6:amd64 (2:1.8.2-2) ...
+#6 57.45 Setting up libxtst6:amd64 (2:1.2.5-1build1) ...
+#6 57.58 Setting up libxcursor1:amd64 (1:1.2.3-1build1) ...
+#6 57.63 Setting up libpsl5t64:amd64 (0.21.2-1.1build2) ...
+#6 57.67 Setting up man-db (2.13.1-1build1) ...
+#6 57.85 debconf: unable to initialize frontend: Dialog
+#6 57.85 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 57.85 debconf: falling back to frontend: Readline
+#6 57.85 debconf: unable to initialize frontend: Readline
+#6 57.85 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+#6 57.85 debconf: falling back to frontend: Teletype
+#6 57.86 debconf: unable to initialize frontend: Teletype
+#6 57.86 debconf: (This frontend requires a controlling tty.)
+#6 57.86 debconf: falling back to frontend: Noninteractive
+#6 57.91 Building database of manual pages ...
+#6 58.43 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-3) ...
+#6 58.60 Setting up libxt6t64:amd64 (1:1.2.1-1.3build1) ...
+#6 59.74 Setting up libxmu6:amd64 (2:1.1.3-4) ...
+#6 59.96 Setting up libcurl4t64:amd64 (8.18.0-1ubuntu2.5) ...
+#6 60.24 Setting up libxaw7:amd64 (2:1.0.16-1build1) ...
+#6 60.53 Setting up curl (8.18.0-1ubuntu2.5) ...
+#6 60.90 Setting up x11-apps (7.7+11build4) ...
+#6 61.12 Processing triggers for libc-bin (2.43-2ubuntu2.3) ...
+#6 61.15 Processing triggers for ca-certificates (20260601~26.04.1) ...
+#6 61.17 Updating certificates in /etc/ssl/certs...
+#6 62.05 0 added, 0 removed; done.
+#6 62.05 Running hooks in /etc/ca-certificates/update.d...
+#6 62.05 done.
+#6 DONE 63.4s
+
+#7 [4/6] RUN curl -O     https://download.esa.int/step/snap/14.0/installers/esa-snap_all_linux-14.0.0.sh &&     sh esa-snap_all_linux-14.0.0.sh -q &&     rm esa-snap_all_linux-14.0.0.sh
+#7 1.291   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+#7 1.291                                  Dload  Upload  Total   Spent   Left   Speed
+#7 1.291   0      0   0      0   0      0      0      0                              0  2  1.09G   2 29.54M   0      0 29.43M      0   00:38   00:01   00:37 29.45M  5  1.09G   5 59.35M   0      0 29.63M      0   00:37   00:02   00:35 29.64M  8  1.09G   8 92.12M   0      0 30.68M      0   00:36   00:03   00:33 30.69M 11  1.09G  11 125.3M   0      0 31.33M      0   00:35   00:04   00:31 31.33M 14  1.09G  14 157.6M   0      0 31.51M      0   00:35   00:05   00:30 31.51M 17  1.09G  17 191.1M   0      0 31.83M      0   00:35   00:06   00:29 32.31M 19  1.09G  19 215.0M   0      0 30.69M      0   00:36   00:07   00:29 31.12M 21  1.09G  21 242.8M   0      0 30.33M      0   00:37   00:08   00:29 30.13M 24  1.09G  24 272.8M   0      0 30.30M      0   00:37   00:09   00:28 29.48M 26  1.09G  26 301.8M   0      0 30.17M      0   00:37   00:10   00:27 28.83M 29  1.09G  29 333.7M   0      0 30.33M      0   00:37   00:11   00:26 28.52M 32  1.09G  32 370.7M   0      0 30.89M      0   00:36   00:12   00:24 31.17M 36  1.09G  36 407.6M   0      0 31.35M      0   00:35   00:13   00:22 32.97M 39  1.09G  39 441.1M   0      0 31.51M      0   00:35   00:13   00:22 33.68M 42  1.09G  42 476.9M   0      0 31.79M      0   00:35   00:14   00:21 35.03M 45  1.09G  45 507.9M   0      0 31.75M      0   00:35   00:15   00:20 34.86M 48  1.09G  48 540.6M   0      0 31.74M      0   00:35   00:17   00:18 33.78M 50  1.09G  50 564.3M   0      0 31.30M      0   00:35   00:18   00:17 31.17M 52  1.09G  52 591.8M   0      0 31.10M      0   00:36   00:19   00:17 29.96M 54  1.09G  54 617.8M   0      0 30.85M      0   00:36   00:20   00:16 28.03M 57  1.09G  57 641.7M   0      0 30.52M      0   00:36   00:21   00:15 26.61M 58  1.09G  58 661.6M   0      0 30.04M      0   00:37   00:22   00:15 24.21M 60  1.09G  60 682.3M   0      0 29.63M      0   00:37   00:23   00:14 23.62M 62  1.09G  62 706.4M   0      0 29.40M      0   00:38   00:24   00:14 22.92M 65  1.09G  65 736.9M   0      0 29.44M      0   00:38   00:25   00:13 23.82M 68  1.09G  68 771.9M   0      0 29.66M      0   00:37   00:26   00:11 26.03M 71  1.09G  71 808.1M   0      0 29.90M      0   00:37   00:27   00:10 29.28M 74  1.09G  74 840.6M   0      0 29.99M      0   00:37   00:28   00:09 31.65M 77  1.09G  77 871.6M   0      0 30.03M      0   00:37   00:29   00:08 33.04M 80  1.09G  80 908.0M   0      0 30.24M      0   00:37   00:30   00:07 34.22M 83  1.09G  83 941.1M   0      0 30.33M      0   00:37   00:31   00:06 33.86M 86  1.09G  86 977.4M   0      0 30.52M      0   00:36   00:32   00:04 33.89M 90  1.09G  90  0.99G   0      0 30.74M      0   00:36   00:33   00:03 34.90M 92  1.09G  92  1.01G   0      0 30.57M      0   00:36   00:34   00:02 33.70M 96  1.09G  96  1.05G   0      0 30.81M      0   00:36   00:35   00:01 34.24M 98  1.09G  98  1.08G   0      0 30.86M      0   00:36   00:36         34.12M100  1.09G 100  1.09G   0      0 30.91M      0   00:36   00:36         34.12M100  1.09G 100  1.09G   0      0 30.91M      0   00:36   00:36         34.12M100  1.09G 100  1.09G   0      0 30.91M      0   00:36   00:36         34.12M
+#7 38.23 Unpacking JRE ...
+#7 39.67 Starting Installer ...
+#7 41.08 The installation directory has been set to /opt/esa-snap.
+#7 41.25 Extracting files ...
+#7 53.55 Finishing installation ...
+#7 DONE 55.2s
+
+#8 [5/6] RUN /opt/esa-snap/bin/snap --nosplash --nogui --modules --list --refresh
+#8 4.071 OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+#8 4.172 WARNING: package com.sun.java.swing.plaf.windows not in java.desktop
+#8 11.95 Refreshing SNAP Supported Plugins
+#8 12.67 Refreshing SNAP Core
+#8 12.69 Refreshing SNAP Community Plugins
+#8 12.71 Refreshing SNAP Toolboxes
+#8 13.06 Code Name                                          Version  State            
+#8 13.06 -------------------------------------------------- -------- -----------------
+#8 13.06 eu.esa.opt.opttbx.seadas.reader.ui                 1.10.6   Upgrade to 1.10.7
+#8 13.06 org.csa.rstb.rstb.op.polarimetric.tools            14.0.0   Enabled          
+#8 13.06 eu.esa.opt.opttbx.rad2refl.ui                      14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.temporal.percentile              14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.swing.plaf                            1.65     Enabled          
+#8 13.06 org.netbeans.modules.extexecution                  1.72     Enabled          
+#8 13.06 eu.esa.opt.opttbx.sentinel3.reader                 14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.slstr.regrid                     14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.html.presenters.spi                   1.8.1    Installed        
+#8 13.06 org.netbeans.modules.options.api                   1.68     Enabled          
+#8 13.06 org.esa.snap.snap.remote.products.repository       14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.pgx.reader                       14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.ecostress.swath2grid             14.0.0   Upgrade to 14.0.1
+#8 13.06 org.openide.modules                                7.71     Enabled          
+#8 13.06 eu.esa.opt.opttbx.flex.reader                      14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.smart.configurator.ui            14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.gdal.reader                      14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.microwavetbx.sar.op.utilities               14.0.0   Enabled          
+#8 13.06 org.esa.sen2coral.sen2coral.kit                    3.0.0    Available        
+#8 13.06 eu.esa.opt.opttbx.enmap.reader                     14.0.0   Upgrade to 14.0.1
+#8 13.06 org.openide.util.lookup                            8.57     Enabled          
+#8 13.06 org.esa.snap.lib.gdal                              14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.modules.masterfs.nio2                 1.38     Enabled          
+#8 13.06 org.netbeans.api.annotations.common                1.51     Enabled          
+#8 13.06 org.esa.snap.snap.remote.execution.ui              14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.globcover.worldmap                    14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.core.output2                          1.65     Enabled          
+#8 13.06 org.esa.snap.snap.branding                         14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.core                             14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.core.netigso                          1.54     Enabled          
+#8 13.06 eu.esa.opt.opttbx.spot.vgt.reader                  14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.fub.wew.ui                       14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.libs.jna.platform                     2.18     Enabled          
+#8 13.06 org.esa.snap.snap.smart.configurator               14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.sen2water.adapter                       0.6.4    Available        
+#8 13.06 eu.esa.microwavetbx.microwavetbx.rcp               14.0.0   Enabled          
+#8 13.06 eu.esa.opt.opttbx.fu.operator                      14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.statistics                       14.0.0   Upgrade to 14.0.1
+#8 13.06 org.openide.execution                              9.26     Enabled          
+#8 13.06 eu.esa.microwavetbx.sar.op.sentinel1               14.0.0   Enabled          
+#8 13.06 org.netbeans.modules.htmlui                        1.8      Installed        
+#8 13.06 eu.esa.opt.opttbx.aatsr.sst                        14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.atsr.reader                      14.0.0   Upgrade to 14.0.1
+#8 13.06 org.csa.rstb.rstb.op.calibration                   14.0.0   Enabled          
+#8 13.06 org.esa.snap.ceres.ui                              14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.mphchl                           14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.spi.quicksearch                       1.50     Enabled          
+#8 13.06 org.openide.windows                                6.100    Enabled          
+#8 13.06 org.esa.s2tbx.sen2cor211                           9.0.0    Available        
+#8 13.06 org.apache.commons.logging                         1.3.0    Installed        
+#8 13.06 eu.esa.opt.opttbx.deimos.reader                    14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.s2msi.reader                     14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.aatsr.sst.ui                     14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.modules.autoupdate.ui                 1.69     Enabled          
+#8 13.06 org.netbeans.modules.sampler                       1.37     Enabled          
+#8 13.06 org.csa.rstb.rstb.op.soil.moisture                 14.0.0   Enabled          
+#8 13.06 eu.esa.opt.opttbx.muscate.reader                   14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.collocation                      14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.gpf.ui                           14.0.0   Upgrade to 14.0.1
+#8 13.06 org.eomasters.eom.davalien                         1.2.2    Available        
+#8 13.06 org.netbeans.modules.templates                     1.30     Enabled          
+#8 13.06 org.esa.snap.ceres.core                            14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.prisma                           14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.raster                           14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.microwavetbx.sar.op.utilities.ui            14.0.0   Enabled          
+#8 13.06 org.esa.snap.snap.csv.dataio                       14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.modules.extbrowser                    1.76     Enabled          
+#8 13.06 eu.esa.opt.opttbx.unmix.ui                         14.0.0   Upgrade to 14.0.1
+#8 13.06 org.openide.actions                                6.62     Enabled          
+#8 13.06 org.openide.compat                                 6.63     Installed        
+#8 13.06 org.esa.snap.snap.pixel.extraction                 14.0.0   Upgrade to 14.0.1
+#8 13.06 org.openide.loaders                                7.93     Enabled          
+#8 13.06 org.openide.nodes                                  7.68     Enabled          
+#8 13.06 org.netbeans.modules.keyring.fallback              1.31     Enabled          
+#8 13.06 org.esa.snap.snap.binning                          14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.swing.outline                         1.57     Enabled          
+#8 13.06 org.openide.io                                     1.72     Enabled          
+#8 13.06 eu.esa.opt.opttbx.hyperspectral.preprocessing.ui   14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.pixel.extraction.ui              14.0.0   Upgrade to 14.0.1
+#8 13.06 org.jlinda.jlinda.nest                             14.0.0   Enabled          
+#8 13.06 org.esa.snap.snap.change.detection                 14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.spot6.reader                     14.0.0   Upgrade to 14.0.1
+#8 13.06 net.java.html.geo                                  1.8.1    Installed        
+#8 13.06 org.esa.snap.snap.gpf                              14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.microwavetbx.sar.op.analysis.ui             14.0.0   Enabled          
+#8 13.06 org.esa.snap.snap.land.cover.ui                    14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.bigtiff                          14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.libs.asm                              5.26     Enabled          
+#8 13.06 com.sun.activation.jakarta.activation              1.2.2    Installed        
+#8 13.06 org.esa.snap.snap.stac                             14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.snap.snap.tango                            14.0.0   Upgrade to 14.0.1
+#8 13.06 org.esa.smostbx.smos.tools                         14.0.0   Enabled          
+#8 13.06 org.netbeans.libs.flatlaf                          1.17     Enabled          
+#8 13.06 org.netbeans.modules.masterfs.linux                1.36     Enabled          
+#8 13.06 eu.esa.opt.opttbx.hyperspectral.preprocessing      14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.opt.opttbx.landsat.reader                   14.0.0   Upgrade to 14.0.1
+#8 13.06 org.netbeans.modules.favorites                     1.69     Enabled          
+#8 13.06 org.esa.snap.snap.arcbingrid.reader                14.0.0   Upgrade to 14.0.1
+#8 13.06 eu.esa.microwavetbx.sar.io                         14.0.0   Enabled          
+#8 13.06 org.netbeans.modules.options.keymap                1.60     Enabled          
+#8 13.06 eu.esa.opt.opttbx.avhrr.reader                     14.0.0   Upgrade to 14.0.1
+#8 13.06 org.apache.commons.commons_io                      2.14     Installed        
+#8 13.06 eu.esa.microwavetbx.sar.io.ephemeris.ui            14.0.0   Enabled          
+#8 13.06 org.netbeans.modules.queries                       1.66     Enabled          
+#8 13.07 eu.esa.opt.opttbx.dos                              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.envisat.reader                   14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.sen2coral.sen2coral.algorithms             3.0.0    Available        
+#8 13.07 eu.esa.opt.opttbx.rapideye.reader                  14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.idepix.modis                          13.0.0   Available        
+#8 13.07 org.netbeans.modules.editor.mimelookup             1.63     Enabled          
+#8 13.07 org.esa.smostbx.smos.gui                           14.0.0   Enabled          
+#8 13.07 org.eomasters.eopedia4snap                         1.1      Available        
+#8 13.07 org.esa.snap.snap.worldwind                        14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.ceres.glayer                          14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.arc.ui                           14.0.0   Upgrade to 14.0.1
+#8 13.07 org.csa.rstb.rstb.op.soil.moisture.ui              14.0.0   Enabled          
+#8 13.07 org.netbeans.libs.felix                            2.38     Enabled          
+#8 13.07 org.csa.rstb.rstb.op.classification.ui             14.0.0   Enabled          
+#8 13.07 eu.esa.opt.opttbx.olci.preprocessing               14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.pconvert                         14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.geotiff                          14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.progress.ui                   1.56     Enabled          
+#8 13.07 org.esa.snap.snap.virtual.file.system.ui           14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.masterfs.ui                   2.26.0.2 Enabled          
+#8 13.07 eu.esa.opt.opttbx.meris.operators.ui               14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.rcp                              14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.rad2refl                         14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.core.multiview                        1.67     Installed        
+#8 13.07 eu.esa.microwavetbx.sar.io.ephemeris               14.0.0   Enabled          
+#8 13.07 org.esa.snap.snap.change.detection.ui              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.sen2coral.sen2coral.inversion.ui           3.0.0    Available        
+#8 13.07 eu.esa.opt.opttbx.slstr.pdu.stitching.ui           14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.microwavetbx.sar.op.insar                   14.0.0   Enabled          
+#8 13.07 net.java.html.boot.fx                              1.8.1    Installed        
+#8 13.07 eu.esa.microwavetbx.sar.op.feature.extraction      14.0.0   Enabled          
+#8 13.07 eu.esa.opt.opttbx.sta.adapters.help                14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.api.visual                            2.71     Installed        
+#8 13.07 org.esa.snap.snap.classification                   14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.keyring.impl                  1.47     Enabled          
+#8 13.07 org.openide.options                                6.60     Installed        
+#8 13.07 org.esa.snap.snap.gdal.writer.ui                   14.0.0   Upgrade to 14.0.1
+#8 13.07 org.openide.explorer                               6.85     Enabled          
+#8 13.07 org.openide.filesystems.compat8                    9.32     Enabled          
+#8 13.07 org.esa.snap.snap.cluster.analysis                 14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.classification.ui                14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.coregistration.ui                14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.worldview2esa.reader             14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.preferences.ui                   14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.mosaic.ui                        14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.core.osgi                             1.45     Installed        
+#8 13.07 org.esa.snap.snap.getasse30.dem                    14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.grm.ui                           14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.libs.batik.read                       1.18.0.1 Enabled          
+#8 13.07 org.netbeans.modules.netbinox                      1.64     Installed        
+#8 13.07 eu.esa.opt.opttbx.ecostress.swath2grid.ui          14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.owt.classification               14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.core.ui                               1.68     Enabled          
+#8 13.07 eu.esa.opt.opttbx.seadas.reader                    1.10.6   Upgrade to 1.10.7
+#8 13.07 org.netbeans.core.startup.base                     1.85.0.1 Enabled          
+#8 13.07 org.esa.snap.snap.watermask.ui                     14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.flhmci.ui                        14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.pleiades.reader                  14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.virtual.file.system              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.idepix.spotvgt                        13.0.0   Available        
+#8 13.07 org.netbeans.modules.core.kit                      1.54     Enabled          
+#8 13.07 eu.esa.microwavetbx.sar.op.calibration             14.0.0   Enabled          
+#8 13.07 org.esa.snap.idepix.landsat8                       13.0.0   Available        
+#8 13.07 org.csa.rstb.rstb.kit                              14.0.0   Enabled          
+#8 13.07 eu.esa.opt.opttbx.merisl3.reader                   14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.sen2coral.sen2coral.inversion              3.0.0    Available        
+#8 13.07 org.esa.smostbx.smos.reader                        14.0.0   Enabled          
+#8 13.07 org.netbeans.libs.junit4                           1.41     Installed        
+#8 13.07 org.netbeans.libs.junit5                           1.20     Installed        
+#8 13.07 org.esa.snap.snap.sta                              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.idepix.viirs                          13.0.0   Available        
+#8 13.07 org.netbeans.modules.autoupdate.services           1.79     Enabled          
+#8 13.07 org.eomasters.eomtbx                               2.0.0    Available        
+#8 13.07 eu.esa.microwavetbx.sar.op.sar.processing.ui       14.0.0   Enabled          
+#8 13.07 org.esa.snap.snap.watermask                        14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.smostbx.smos.kit                           14.0.0   Enabled          
+#8 13.07 org.esa.snap.snap.collocation.ui                   14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.dem                              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.core.network                          1.35     Enabled          
+#8 13.07 eu.esa.opt.opttbx.spot.reader                      14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.s2msi.mci                        14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.idepix.olci                           13.0.0   Available        
+#8 13.07 org.esa.snap.snap.envi.reader                      14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.lib.openjpeg                          14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.api.search                            1.44     Installed        
+#8 13.07 org.openide.filesystems.nb                         9.33     Enabled          
+#8 13.07 org.netbeans.modules.keyring                       1.47     Enabled          
+#8 13.07 org.netbeans.core.windows                          2.108    Enabled          
+#8 13.07 org.netbeans.api.templates                         1.31     Enabled          
+#8 13.07 org.esa.snap.snap.netcdf                           14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.alos.reader                      14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.swing.laf.flatlaf                     1.16     Enabled          
+#8 13.07 org.netbeans.modules.autoupdate.cli                1.37     Enabled          
+#8 13.07 eu.esa.snap.netbeans                               1.3.0    Enabled          
+#8 13.07 org.netbeans.modules.uihandler                     2.58     Installed        
+#8 13.07 org.esa.snap.snap.virtual.file.system.preferences. 14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.janitor                       1.16     Enabled          
+#8 13.07 eu.esa.opt.opttbx.kit                              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.templatesui                   1.26     Installed        
+#8 13.07 org.esa.snap.snap.binning.ui                       14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.s2tbx.sen2cor280                           7.0.0    Available        
+#8 13.07 org.esa.snap.idepix.seawifs                        13.0.0   Available        
+#8 13.07 eu.esa.opt.opttbx.s2msi.mci.ui                     14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.commons                          14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.s2msi.reader.ui                  14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.grm                              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.bootstrap                             2.102    Enabled          
+#8 13.07 eu.esa.opt.opttbx.modis.reader                     14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.print                         7.49     Enabled          
+#8 13.07 org.jlinda.jlinda.core                             14.0.0   Enabled          
+#8 13.07 eu.esa.opt.opttbx.jp2.writer                       14.0.0   Upgrade to 14.0.1
+#8 13.07 org.openide.util                                   9.31     Enabled          
+#8 13.07 org.netbeans.modules.spi.actions                   1.51     Installed        
+#8 13.07 eu.esa.snap.esa.snappy                             14.0.0   Enabled          
+#8 13.07 org.esa.snap.snap.znap.ui                          14.0.0   Upgrade to 14.0.1
+#8 13.07 com.airbus.snap.snap.novasar.reader                1.2.4    Available        
+#8 13.07 eu.esa.opt.opttbx.coregistration                   14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.reflectance.to.radiance.ui       14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.ceres.jai                             14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.core.gpf.operators.tooladapter.snaphu 8.0.0    Available        
+#8 13.07 org.esa.s2tbx.sen2cor290                           9.0.0    Available        
+#8 13.07 org.jlinda.jlinda.nest.ui                          14.0.0   Enabled          
+#8 13.07 org.apache.commons.codec                           1.16.0   Installed        
+#8 13.07 org.esa.snap.idepix.meris                          13.0.0   Available        
+#8 13.07 org.netbeans.core.io.ui                            1.53     Enabled          
+#8 13.07 org.netbeans.html.xhr4j                            1.8.1    Installed        
+#8 13.07 org.netbeans.api.progress.compat8                  1.70     Installed        
+#8 13.07 org.openide.dialogs                                7.70     Enabled          
+#8 13.07 org.esa.snap.blue.marble.worldmap                  14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.land.cover                       14.0.0   Upgrade to 14.0.1
+#8 13.07 org.openide.awt                                    7.91     Enabled          
+#8 13.07 org.esa.snap.snap.hdf5.writer                      14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.forest.cover.change.ui           14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.c2rcc                            14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.mosaic                           14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.microwavetbx.sar.op.calibration.ui          14.0.0   Enabled          
+#8 13.07 org.netbeans.api.io                                1.26     Enabled          
+#8 13.07 org.netbeans.api.intent                            1.25     Enabled          
+#8 13.07 org.esa.snap.snap.znap                             14.0.0   Upgrade to 14.0.1
+#8 13.07 org.csa.rstb.rstb.op.polarimetric.tools.ui         14.0.0   Enabled          
+#8 13.07 org.csa.rstb.rstb.op.classification                14.0.0   Enabled          
+#8 13.07 org.netbeans.api.progress.nb                       1.71     Enabled          
+#8 13.07 org.esa.snap.snap.product.library.v2               14.0.0   Upgrade to 14.0.1
+#8 13.07 net.java.html.sound                                1.8.1    Installed        
+#8 13.07 org.netbeans.api.progress                          1.71     Enabled          
+#8 13.07 ncsa.hdf.lib.hdf                                   14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.probav.reader                    14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.spectral.library                 14.0.0   Upgrade to 14.0.1
+#8 13.07 org.openide.util.ui                                9.32     Enabled          
+#8 13.07 eu.esa.microwavetbx.sar.io.gdal                    14.0.0   Enabled          
+#8 13.07 org.openide.util.ui.svg                            1.17     Enabled          
+#8 13.07 org.netbeans.libs.javafx                           2.30     Installed        
+#8 13.07 eu.esa.microwavetbx.sar.cloud                      14.0.0   Enabled          
+#8 13.07 org.openide.text                                   6.91     Enabled          
+#8 13.07 org.esa.smostbx.smos.ee2netcdf.ui                  14.0.0   Enabled          
+#8 13.07 org.esa.snap.snap.help                             14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.microwavetbx.sar.op.insar.ui                14.0.0   Enabled          
+#8 13.07 org.esa.snap.snap.ui                               14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.libs.osgi                             1.45     Enabled          
+#8 13.07 eu.esa.microwavetbx.sar.op.sar.processing          14.0.0   Enabled          
+#8 13.07 eu.esa.opt.opttbx.s2msi.resampler                  14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.reflectance.to.radiance          14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.idepix.s2msi                          13.0.0   Available        
+#8 13.07 org.esa.snap.snap.product.library.ui.v2            14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.spectral.angle.mapper.ui         14.0.0   Upgrade to 14.0.1
+#8 13.07 net.java.html.json                                 1.8.1    Installed        
+#8 13.07 org.netbeans.core.startup                          1.86.0.1 Enabled          
+#8 13.07 org.esa.smostbx.smos.dgg                           14.0.0   Enabled          
+#8 13.07 org.netbeans.core.execution                        1.65     Enabled          
+#8 13.07 org.esa.smostbx.smos.lsmask                        14.0.0   Enabled          
+#8 13.07 org.esa.snap.snap.gdal.writer                      14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.spectral.angle.mapper            14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.meris.operators                  14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.ceres.binio                           14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.swing.laf.dark                        2.18.0.2 Enabled          
+#8 13.07 eu.esa.opt.opttbx.arc                              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.core                                  3.74     Enabled          
+#8 13.07 eu.esa.opt.opttbx.sentinel3.reader.ui              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.sendopts                      2.59     Enabled          
+#8 13.07 eu.esa.opt.opttbx.worldview2.reader                14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.ceres.binding                         14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.raster.ui                        14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.snap.netbeans.snap.help.system              1.0.3    Enabled          
+#8 13.07 eu.esa.microwavetbx.sar.op.feature.extraction.ui   14.0.0   Enabled          
+#8 13.07 eu.esa.opt.opttbx.flhmci                           14.0.0   Upgrade to 14.0.1
+#8 13.07 net.java.html.boot                                 1.8.1    Installed        
+#8 13.07 net.java.html.boot.script                          1.8.1    Installed        
+#8 13.07 eu.esa.microwavetbx.microwavetbx.kit               14.0.0   Enabled          
+#8 13.07 org.esa.snap.snap.engine.kit                       14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.sta.ui                           14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.biophysical                      14.0.0   Upgrade to 14.0.1
+#8 13.07 org.csa.rstb.rstb.io                               14.0.0   Enabled          
+#8 13.07 org.netbeans.core.nativeaccess                     1.54     Enabled          
+#8 13.07 org.esa.snap.snap.jp2.reader                       14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.idepix.core                           13.0.0   Available        
+#8 13.07 eu.esa.opt.opttbx.kompsat2.reader                  14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.land.cover                       14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.engine.utilities                 14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.eopf.s2.zarr.reader                     1.0.0    Available        
+#8 13.07 org.esa.snap.snap.dem.ui                           14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.settings                      1.72     Enabled          
+#8 13.07 eu.esa.opt.sen2cor212                              10.0.0   Available        
+#8 13.07 org.esa.s2tbx.sen2cor255                           7.0.0    Available        
+#8 13.07 eu.esa.opt.opttbx.ecostress.reader                 14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.opt.opttbx.ikonos.reader                    14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.ceres.metadata                        14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.masterfs                      2.78.0.2 Enabled          
+#8 13.07 org.netbeans.lib.uihandler                         1.68     Installed        
+#8 13.07 org.esa.sen2coral.sen2coral.algorithms.ui          3.0.0    Available        
+#8 13.07 net.java.html                                      1.8.1    Installed        
+#8 13.07 eu.esa.microwavetbx.sar.commons                    14.0.0   Enabled          
+#8 13.07 eu.esa.opt.opttbx.s2msi.resampler.ui               14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.smostbx.smos.ee2netcdf                     14.0.0   Enabled          
+#8 13.07 org.netbeans.core.multitabs                        1.35.0.1 Enabled          
+#8 13.07 eu.esa.opt.opttbx.unmix                            14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.sen2res                               2.0      Available        
+#8 13.07 org.netbeans.modules.editor.mimelookup.impl        1.55     Enabled          
+#8 13.07 org.openide.filesystems                            9.36     Enabled          
+#8 13.07 eu.esa.opt.opttbx.forest.cover.change              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.graph.builder                    14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.api.scripting                         1.20     Enabled          
+#8 13.07 eu.esa.opt.opttbx.radiometric.indices              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.modules.extexecution.base             1.29     Enabled          
+#8 13.07 org.netbeans.api.htmlui                            1.31     Installed        
+#8 13.07 eu.esa.opt.opttbx.slstr.pdu.stitching              14.0.0   Upgrade to 14.0.1
+#8 13.07 org.netbeans.swing.tabcontrol                      1.80     Enabled          
+#8 13.07 org.netbeans.libs.jna                              2.18     Enabled          
+#8 13.07 org.netbeans.html.ko4j                             1.8.1    Installed        
+#8 13.07 eu.esa.opt.opttbx.radiometric.indices.ui           14.0.0   Upgrade to 14.0.1
+#8 13.07 org.esa.snap.snap.remote.execution                 14.0.0   Upgrade to 14.0.1
+#8 13.07 eu.esa.microwavetbx.sar.op.sentinel1.ui            14.0.0   Enabled          
+#8 13.07 eu.esa.opt.opttbx.fub.wew                          14.0.0   Upgrade to 14.0.1
+#8 13.07 org.openide.execution.compat8                      9.25     Installed        
+#8 13.07 org.netbeans.libs.jsr223                           1.58     Installed        
+#8 13.07 -------------------------------------------------- -------- -----------------
+#8 13.09 WARNING: A terminally deprecated method in java.lang.System has been called
+#8 13.09 WARNING: System::setSecurityManager has been called by org.netbeans.TopSecurityManager (file:/opt/esa-snap/platform/lib/boot.jar)
+#8 13.09 WARNING: Please consider reporting this to the maintainers of org.netbeans.TopSecurityManager
+#8 13.09 WARNING: System::setSecurityManager will be removed in a future release
+#8 DONE 45.6s
+
+#9 [6/6] RUN /opt/esa-snap/bin/snap --nosplash --nogui --modules --update-all
+#9 0.713 OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+#9 0.818 WARNING: package com.sun.java.swing.plaf.windows not in java.desktop
+#9 4.367 Will update eu.esa.opt.opttbx.seadas.reader.ui@1.10.6 to version 1.10.7
+#9 4.439 Will update eu.esa.opt.opttbx.rad2refl.ui@14.0.0 to version 14.0.1
+#9 4.443 Will update org.esa.snap.snap.temporal.percentile@14.0.0 to version 14.0.1
+#9 4.444 Will update eu.esa.opt.opttbx.sentinel3.reader@14.0.0 to version 14.0.1
+#9 4.444 Will update eu.esa.opt.opttbx.slstr.regrid@14.0.0 to version 14.0.1
+#9 4.445 Will update org.esa.snap.snap.remote.products.repository@14.0.0 to version 14.0.1
+#9 4.446 Will update org.esa.snap.snap.pgx.reader@14.0.0 to version 14.0.1
+#9 4.447 Will update eu.esa.opt.opttbx.ecostress.swath2grid@14.0.0 to version 14.0.1
+#9 4.449 Will update eu.esa.opt.opttbx.flex.reader@14.0.0 to version 14.0.1
+#9 4.450 Will update org.esa.snap.snap.smart.configurator.ui@14.0.0 to version 14.0.1
+#9 4.454 Will update org.esa.snap.snap.gdal.reader@14.0.0 to version 14.0.1
+#9 4.456 Will update eu.esa.opt.opttbx.enmap.reader@14.0.0 to version 14.0.1
+#9 4.458 Will update org.esa.snap.lib.gdal@14.0.0 to version 14.0.1
+#9 4.459 Will update org.esa.snap.snap.remote.execution.ui@14.0.0 to version 14.0.1
+#9 4.459 Will update org.esa.snap.globcover.worldmap@14.0.0 to version 14.0.1
+#9 4.460 Will update org.esa.snap.snap.branding@14.0.0 to version 14.0.1
+#9 4.461 Will update org.esa.snap.snap.core@14.0.0 to version 14.0.1
+#9 4.461 Will update eu.esa.opt.opttbx.spot.vgt.reader@14.0.0 to version 14.0.1
+#9 4.462 Will update eu.esa.opt.opttbx.fub.wew.ui@14.0.0 to version 14.0.1
+#9 4.463 Will update org.esa.snap.snap.smart.configurator@14.0.0 to version 14.0.1
+#9 4.463 Will update eu.esa.opt.opttbx.fu.operator@14.0.0 to version 14.0.1
+#9 4.464 Will update org.esa.snap.snap.statistics@14.0.0 to version 14.0.1
+#9 4.465 Will update eu.esa.opt.opttbx.aatsr.sst@14.0.0 to version 14.0.1
+#9 4.466 Will update eu.esa.opt.opttbx.atsr.reader@14.0.0 to version 14.0.1
+#9 4.467 Will update org.esa.snap.ceres.ui@14.0.0 to version 14.0.1
+#9 4.468 Will update eu.esa.opt.opttbx.mphchl@14.0.0 to version 14.0.1
+#9 4.472 Will update eu.esa.opt.opttbx.deimos.reader@14.0.0 to version 14.0.1
+#9 4.473 Will update eu.esa.opt.opttbx.s2msi.reader@14.0.0 to version 14.0.1
+#9 4.474 Will update eu.esa.opt.opttbx.aatsr.sst.ui@14.0.0 to version 14.0.1
+#9 4.476 Will update eu.esa.opt.opttbx.muscate.reader@14.0.0 to version 14.0.1
+#9 4.478 Will update org.esa.snap.snap.collocation@14.0.0 to version 14.0.1
+#9 4.479 Will update org.esa.snap.snap.gpf.ui@14.0.0 to version 14.0.1
+#9 4.479 Will update org.esa.snap.ceres.core@14.0.0 to version 14.0.1
+#9 4.480 Will update eu.esa.opt.opttbx.prisma@14.0.0 to version 14.0.1
+#9 4.481 Will update org.esa.snap.snap.raster@14.0.0 to version 14.0.1
+#9 4.481 Will update org.esa.snap.snap.csv.dataio@14.0.0 to version 14.0.1
+#9 4.481 Will update eu.esa.opt.opttbx.unmix.ui@14.0.0 to version 14.0.1
+#9 4.482 Will update org.esa.snap.snap.pixel.extraction@14.0.0 to version 14.0.1
+#9 4.484 Will update org.esa.snap.snap.binning@14.0.0 to version 14.0.1
+#9 4.485 Will update eu.esa.opt.opttbx.hyperspectral.preprocessing.ui@14.0.0 to version 14.0.1
+#9 4.486 Will update org.esa.snap.snap.pixel.extraction.ui@14.0.0 to version 14.0.1
+#9 4.488 Will update org.esa.snap.snap.change.detection@14.0.0 to version 14.0.1
+#9 4.488 Will update eu.esa.opt.opttbx.spot6.reader@14.0.0 to version 14.0.1
+#9 4.490 Will update org.esa.snap.snap.gpf@14.0.0 to version 14.0.1
+#9 4.490 Will update org.esa.snap.snap.land.cover.ui@14.0.0 to version 14.0.1
+#9 4.493 Will update org.esa.snap.snap.bigtiff@14.0.0 to version 14.0.1
+#9 4.493 Will update org.esa.snap.snap.stac@14.0.0 to version 14.0.1
+#9 4.494 Will update org.esa.snap.snap.tango@14.0.0 to version 14.0.1
+#9 4.494 Will update eu.esa.opt.opttbx.hyperspectral.preprocessing@14.0.0 to version 14.0.1
+#9 4.495 Will update eu.esa.opt.opttbx.landsat.reader@14.0.0 to version 14.0.1
+#9 4.496 Will update org.esa.snap.snap.arcbingrid.reader@14.0.0 to version 14.0.1
+#9 4.498 Will update eu.esa.opt.opttbx.avhrr.reader@14.0.0 to version 14.0.1
+#9 4.499 Will update eu.esa.opt.opttbx.dos@14.0.0 to version 14.0.1
+#9 4.500 Will update org.esa.snap.snap.envisat.reader@14.0.0 to version 14.0.1
+#9 4.501 Will update eu.esa.opt.opttbx.rapideye.reader@14.0.0 to version 14.0.1
+#9 4.502 Will update org.esa.snap.snap.worldwind@14.0.0 to version 14.0.1
+#9 4.503 Will update org.esa.snap.ceres.glayer@14.0.0 to version 14.0.1
+#9 4.503 Will update eu.esa.opt.opttbx.arc.ui@14.0.0 to version 14.0.1
+#9 4.505 Will update eu.esa.opt.opttbx.olci.preprocessing@14.0.0 to version 14.0.1
+#9 4.506 Will update org.esa.snap.snap.pconvert@14.0.0 to version 14.0.1
+#9 4.507 Will update org.esa.snap.snap.geotiff@14.0.0 to version 14.0.1
+#9 4.507 Will update org.esa.snap.snap.virtual.file.system.ui@14.0.0 to version 14.0.1
+#9 4.508 Will update eu.esa.opt.opttbx.meris.operators.ui@14.0.0 to version 14.0.1
+#9 4.509 Will update org.esa.snap.snap.rcp@14.0.0 to version 14.0.1
+#9 4.510 Will update eu.esa.opt.opttbx.rad2refl@14.0.0 to version 14.0.1
+#9 4.510 Will update org.esa.snap.snap.change.detection.ui@14.0.0 to version 14.0.1
+#9 4.512 Will update eu.esa.opt.opttbx.slstr.pdu.stitching.ui@14.0.0 to version 14.0.1
+#9 4.514 Will update eu.esa.opt.opttbx.sta.adapters.help@14.0.0 to version 14.0.1
+#9 4.515 Will update org.esa.snap.snap.classification@14.0.0 to version 14.0.1
+#9 4.516 Will update org.esa.snap.snap.gdal.writer.ui@14.0.0 to version 14.0.1
+#9 4.517 Will update org.esa.snap.snap.cluster.analysis@14.0.0 to version 14.0.1
+#9 4.518 Will update org.esa.snap.snap.classification.ui@14.0.0 to version 14.0.1
+#9 4.520 Will update eu.esa.opt.opttbx.coregistration.ui@14.0.0 to version 14.0.1
+#9 4.522 Will update eu.esa.opt.opttbx.worldview2esa.reader@14.0.0 to version 14.0.1
+#9 4.523 Will update eu.esa.opt.opttbx.preferences.ui@14.0.0 to version 14.0.1
+#9 4.524 Will update eu.esa.opt.opttbx.mosaic.ui@14.0.0 to version 14.0.1
+#9 4.526 Will update org.esa.snap.snap.getasse30.dem@14.0.0 to version 14.0.1
+#9 4.527 Will update eu.esa.opt.opttbx.grm.ui@14.0.0 to version 14.0.1
+#9 4.529 Will update eu.esa.opt.opttbx.ecostress.swath2grid.ui@14.0.0 to version 14.0.1
+#9 4.530 Will update eu.esa.opt.opttbx.owt.classification@14.0.0 to version 14.0.1
+#9 4.532 Will update eu.esa.opt.opttbx.seadas.reader@1.10.6 to version 1.10.7
+#9 4.532 Will update org.esa.snap.snap.watermask.ui@14.0.0 to version 14.0.1
+#9 4.534 Will update eu.esa.opt.opttbx.flhmci.ui@14.0.0 to version 14.0.1
+#9 4.535 Will update eu.esa.opt.opttbx.pleiades.reader@14.0.0 to version 14.0.1
+#9 4.536 Will update org.esa.snap.snap.virtual.file.system@14.0.0 to version 14.0.1
+#9 4.537 Will update eu.esa.opt.opttbx.merisl3.reader@14.0.0 to version 14.0.1
+#9 4.537 Will update org.esa.snap.snap.sta@14.0.0 to version 14.0.1
+#9 4.538 Will update org.esa.snap.snap.watermask@14.0.0 to version 14.0.1
+#9 4.539 Will update org.esa.snap.snap.collocation.ui@14.0.0 to version 14.0.1
+#9 4.540 Will update org.esa.snap.snap.dem@14.0.0 to version 14.0.1
+#9 4.540 Will update eu.esa.opt.opttbx.spot.reader@14.0.0 to version 14.0.1
+#9 4.541 Will update eu.esa.opt.opttbx.s2msi.mci@14.0.0 to version 14.0.1
+#9 4.543 Will update org.esa.snap.snap.envi.reader@14.0.0 to version 14.0.1
+#9 4.543 Will update org.esa.snap.lib.openjpeg@14.0.0 to version 14.0.1
+#9 4.544 Will update org.esa.snap.snap.netcdf@14.0.0 to version 14.0.1
+#9 4.544 Will update eu.esa.opt.opttbx.alos.reader@14.0.0 to version 14.0.1
+#9 4.545 Will update org.esa.snap.snap.virtual.file.system.preferences.ui@14.0.0 to version 14.0.1
+#9 4.546 Will update eu.esa.opt.opttbx.kit@14.0.0 to version 14.0.1
+#9 4.565 Will update org.esa.snap.snap.binning.ui@14.0.0 to version 14.0.1
+#9 4.567 Will update eu.esa.opt.opttbx.s2msi.mci.ui@14.0.0 to version 14.0.1
+#9 4.567 Will update eu.esa.opt.opttbx.commons@14.0.0 to version 14.0.1
+#9 4.568 Will update eu.esa.opt.opttbx.s2msi.reader.ui@14.0.0 to version 14.0.1
+#9 4.568 Will update eu.esa.opt.opttbx.grm@14.0.0 to version 14.0.1
+#9 4.569 Will update eu.esa.opt.opttbx.modis.reader@14.0.0 to version 14.0.1
+#9 4.569 Will update eu.esa.opt.opttbx.jp2.writer@14.0.0 to version 14.0.1
+#9 4.570 Will update org.esa.snap.snap.znap.ui@14.0.0 to version 14.0.1
+#9 4.572 Will update eu.esa.opt.opttbx.coregistration@14.0.0 to version 14.0.1
+#9 4.573 Will update eu.esa.opt.opttbx.reflectance.to.radiance.ui@14.0.0 to version 14.0.1
+#9 4.573 Will update org.esa.snap.ceres.jai@14.0.0 to version 14.0.1
+#9 4.573 Will update org.esa.snap.blue.marble.worldmap@14.0.0 to version 14.0.1
+#9 4.575 Will update org.esa.snap.snap.land.cover@14.0.0 to version 14.0.1
+#9 4.575 Will update org.esa.snap.snap.hdf5.writer@14.0.0 to version 14.0.1
+#9 4.576 Will update eu.esa.opt.opttbx.forest.cover.change.ui@14.0.0 to version 14.0.1
+#9 4.577 Will update eu.esa.opt.opttbx.c2rcc@14.0.0 to version 14.0.1
+#9 4.577 Will update eu.esa.opt.opttbx.mosaic@14.0.0 to version 14.0.1
+#9 4.578 Will update org.esa.snap.snap.znap@14.0.0 to version 14.0.1
+#9 4.578 Will update org.esa.snap.snap.product.library.v2@14.0.0 to version 14.0.1
+#9 4.578 Will update ncsa.hdf.lib.hdf@14.0.0 to version 14.0.1
+#9 4.579 Will update eu.esa.opt.opttbx.probav.reader@14.0.0 to version 14.0.1
+#9 4.579 Will update org.esa.snap.snap.spectral.library@14.0.0 to version 14.0.1
+#9 4.580 Will update org.esa.snap.snap.help@14.0.0 to version 14.0.1
+#9 4.581 Will update org.esa.snap.snap.ui@14.0.0 to version 14.0.1
+#9 4.581 Will update eu.esa.opt.opttbx.s2msi.resampler@14.0.0 to version 14.0.1
+#9 4.582 Will update eu.esa.opt.opttbx.reflectance.to.radiance@14.0.0 to version 14.0.1
+#9 4.582 Will update org.esa.snap.snap.product.library.ui.v2@14.0.0 to version 14.0.1
+#9 4.585 Will update eu.esa.opt.opttbx.spectral.angle.mapper.ui@14.0.0 to version 14.0.1
+#9 4.585 Will update org.esa.snap.snap.gdal.writer@14.0.0 to version 14.0.1
+#9 4.586 Will update eu.esa.opt.opttbx.spectral.angle.mapper@14.0.0 to version 14.0.1
+#9 4.586 Will update eu.esa.opt.opttbx.meris.operators@14.0.0 to version 14.0.1
+#9 4.587 Will update org.esa.snap.ceres.binio@14.0.0 to version 14.0.1
+#9 4.587 Will update eu.esa.opt.opttbx.arc@14.0.0 to version 14.0.1
+#9 4.588 Will update eu.esa.opt.opttbx.sentinel3.reader.ui@14.0.0 to version 14.0.1
+#9 4.588 Will update eu.esa.opt.opttbx.worldview2.reader@14.0.0 to version 14.0.1
+#9 4.589 Will update org.esa.snap.ceres.binding@14.0.0 to version 14.0.1
+#9 4.589 Will update org.esa.snap.snap.raster.ui@14.0.0 to version 14.0.1
+#9 4.591 Will update eu.esa.opt.opttbx.flhmci@14.0.0 to version 14.0.1
+#9 4.591 Will update org.esa.snap.snap.engine.kit@14.0.0 to version 14.0.1
+#9 4.596 Will update org.esa.snap.snap.sta.ui@14.0.0 to version 14.0.1
+#9 4.598 Will update eu.esa.opt.opttbx.biophysical@14.0.0 to version 14.0.1
+#9 4.599 Will update org.esa.snap.snap.jp2.reader@14.0.0 to version 14.0.1
+#9 4.599 Will update eu.esa.opt.opttbx.kompsat2.reader@14.0.0 to version 14.0.1
+#9 4.599 Will update eu.esa.opt.opttbx.land.cover@14.0.0 to version 14.0.1
+#9 4.600 Will update org.esa.snap.snap.engine.utilities@14.0.0 to version 14.0.1
+#9 4.600 Will update org.esa.snap.snap.dem.ui@14.0.0 to version 14.0.1
+#9 4.602 Will update eu.esa.opt.opttbx.ecostress.reader@14.0.0 to version 14.0.1
+#9 4.602 Will update eu.esa.opt.opttbx.ikonos.reader@14.0.0 to version 14.0.1
+#9 4.603 Will update org.esa.snap.ceres.metadata@14.0.0 to version 14.0.1
+#9 4.603 Will update eu.esa.opt.opttbx.s2msi.resampler.ui@14.0.0 to version 14.0.1
+#9 4.603 Will update eu.esa.opt.opttbx.unmix@14.0.0 to version 14.0.1
+#9 4.604 Will update eu.esa.opt.opttbx.forest.cover.change@14.0.0 to version 14.0.1
+#9 4.604 Will update org.esa.snap.snap.graph.builder@14.0.0 to version 14.0.1
+#9 4.605 Will update eu.esa.opt.opttbx.radiometric.indices@14.0.0 to version 14.0.1
+#9 4.605 Will update eu.esa.opt.opttbx.slstr.pdu.stitching@14.0.0 to version 14.0.1
+#9 4.606 Will update eu.esa.opt.opttbx.radiometric.indices.ui@14.0.0 to version 14.0.1
+#9 4.606 Will update org.esa.snap.snap.remote.execution@14.0.0 to version 14.0.1
+#9 4.607 Will update eu.esa.opt.opttbx.fub.wew@14.0.0 to version 14.0.1
+#9 4.695 updates=156
+#9 5.110 Establishing a connection ...
+#9 5.110 Establishing a connection ...
+#9 5.879 SNAP Virtual File System UI
+#9 5.879 SNAP Virtual File System UI
+#9 6.318 SNAP Desktop Rich Client Platform
+#9 6.319 SNAP Desktop Rich Client Platform
+#9 6.730 SNAP Core Library
+#9 6.730 SNAP Core Library
+#9 7.138 SNAP Core Library
+#9 7.138 SNAP Core Library
+#9 7.548 SNAP Core Library
+#9 7.548 SNAP Core Library
+#9 7.959 SNAP Core Library
+#9 7.959 SNAP Core Library
+#9 8.367 SNAP Core Library
+#9 8.367 SNAP Core Library
+#9 8.775 SNAP Statistics Operator
+#9 8.775 SNAP Statistics Operator
+#9 9.185 SNAP NetCDF Product Reader/Writer
+#9 9.185 SNAP NetCDF Product Reader/Writer
+#9 9.597 SNAP NetCDF Product Reader/Writer
+#9 9.597 SNAP NetCDF Product Reader/Writer
+#9 10.00 SNAP NetCDF Product Reader/Writer
+#9 10.00 SNAP NetCDF Product Reader/Writer
+#9 10.41 SNAP NetCDF Product Reader/Writer
+#9 10.41 SNAP NetCDF Product Reader/Writer
+#9 10.81 SNAP Engine Utilities
+#9 10.81 SNAP Engine Utilities
+#9 11.21 SNAP Remote Products Repository
+#9 11.21 SNAP Remote Products Repository
+#9 11.62 SNAP Remote Products Repository
+#9 11.62 SNAP Remote Products Repository
+#9 12.02 SNAP Remote Products Repository
+#9 12.02 SNAP Remote Products Repository
+#9 12.42 ECOSTRESS Swath to Grid conversion operator
+#9 12.42 ECOSTRESS Swath to Grid conversion operator
+#9 12.83 HDF Library
+#9 12.83 HDF Library
+#9 13.24 ECOSTRESS Product Reader
+#9 13.24 ECOSTRESS Product Reader
+#9 13.64 SNAP Graph Builder
+#9 13.64 SNAP Graph Builder
+#9 14.04 GDAL Native Libraries
+#9 14.04 GDAL Native Libraries
+#9 14.44 GDAL Native Libraries
+#9 14.44 GDAL Native Libraries
+#9 14.84 GDAL Native Libraries
+#9 14.84 GDAL Native Libraries
+#9 15.25 GDAL Native Libraries
+#9 15.25 GDAL Native Libraries
+#9 15.65 GDAL Native Libraries
+#9 15.65 GDAL Native Libraries
+#9 16.05 GDAL Native Libraries
+#9 16.05 GDAL Native Libraries
+#9 16.45 GDAL Native Libraries
+#9 16.45 GDAL Native Libraries
+#9 16.86 GDAL Native Libraries
+#9 16.86 GDAL Native Libraries
+#9 17.26 GDAL Native Libraries
+#9 17.26 GDAL Native Libraries
+#9 17.66 GDAL Native Libraries
+#9 17.66 GDAL Native Libraries
+#9 18.06 GDAL Native Libraries
+#9 18.06 GDAL Native Libraries
+#9 18.47 GDAL Native Libraries
+#9 18.47 GDAL Native Libraries
+#9 18.87 GDAL Native Libraries
+#9 18.87 GDAL Native Libraries
+#9 19.27 GDAL Native Libraries
+#9 19.27 GDAL Native Libraries
+#9 19.67 GDAL Native Libraries
+#9 19.67 GDAL Native Libraries
+#9 20.08 GDAL Native Libraries
+#9 20.08 GDAL Native Libraries
+#9 20.48 GDAL Native Libraries
+#9 20.48 GDAL Native Libraries
+#9 20.88 GDAL Native Libraries
+#9 20.88 GDAL Native Libraries
+#9 21.29 GDAL Native Libraries
+#9 21.29 GDAL Native Libraries
+#9 21.69 GDAL Native Libraries
+#9 21.69 GDAL Native Libraries
+#9 22.09 GDAL Native Libraries
+#9 22.09 GDAL Native Libraries
+#9 22.50 GDAL Native Libraries
+#9 22.50 GDAL Native Libraries
+#9 22.90 GDAL Native Libraries
+#9 22.90 GDAL Native Libraries
+#9 23.30 GDAL Native Libraries
+#9 23.30 GDAL Native Libraries
+#9 23.70 GDAL Native Libraries
+#9 23.70 GDAL Native Libraries
+#9 24.11 OpenJpeg Library
+#9 24.11 OpenJpeg Library
+#9 24.51 Optical Toolbox Common Tools
+#9 24.51 Optical Toolbox Common Tools
+#9 24.91 ESA GlobCover Worldmap
+#9 24.91 ESA GlobCover Worldmap
+#9 25.32 ESA GlobCover Worldmap
+#9 25.32 ESA GlobCover Worldmap
+#9 25.72 ESA GlobCover Worldmap
+#9 25.72 ESA GlobCover Worldmap
+#9 26.12 ESA GlobCover Worldmap
+#9 26.12 ESA GlobCover Worldmap
+#9 26.52 Sentinel-3 OLCI Preprocessing Operators
+#9 26.52 Sentinel-3 OLCI Preprocessing Operators
+#9 26.93 Sentinel-3 OLCI Preprocessing Operators
+#9 26.93 Sentinel-3 OLCI Preprocessing Operators
+#9 27.33 Sentinel-2 MSI Reader
+#9 27.33 Sentinel-2 MSI Reader
+#9 27.73 Sentinel-2 MSI Reader
+#9 27.73 Sentinel-2 MSI Reader
+#9 28.13 Spectral Unmixing Tool
+#9 28.13 Spectral Unmixing Tool
+#9 28.54 Landsat Product Reader
+#9 28.54 Landsat Product Reader
+#9 28.95 SNAP WorldWind
+#9 28.95 SNAP WorldWind
+#9 29.35 SNAP WorldWind
+#9 29.35 SNAP WorldWind
+#9 29.76 Common MERIS Operators
+#9 29.76 Common MERIS Operators
+#9 30.16 Common MERIS Operators
+#9 30.16 Common MERIS Operators
+#9 30.56 Sentinel-3 SLSTR PDU Stitching
+#9 30.56 Sentinel-3 SLSTR PDU Stitching
+#9 30.97 SNAP Classification
+#9 30.97 SNAP Classification
+#9 31.37 SNAP Cluster Analysis
+#9 31.37 SNAP Cluster Analysis
+#9 31.78 Sentinel-2 Coregistration Processor
+#9 31.78 Sentinel-2 Coregistration Processor
+#9 32.19 Sentinel-2 Coregistration Processor
+#9 32.19 Sentinel-2 Coregistration Processor
+#9 32.59 Sentinel-2 Coregistration Processor
+#9 32.59 Sentinel-2 Coregistration Processor
+#9 32.99 Sentinel-2 Coregistration Processor
+#9 32.99 Sentinel-2 Coregistration Processor
+#9 33.39 Sentinel-2 Coregistration Processor
+#9 33.39 Sentinel-2 Coregistration Processor
+#9 33.80 Sentinel-2 Coregistration Processor
+#9 33.80 Sentinel-2 Coregistration Processor
+#9 34.20 Optical Toolbox Mosaic GUI
+#9 34.20 Optical Toolbox Mosaic GUI
+#9 34.60 Optical Toolbox Generic Region Merging
+#9 34.60 Optical Toolbox Generic Region Merging
+#9 35.00 ECOSTRESS Swath to Grid conversion operator UI
+#9 35.00 ECOSTRESS Swath to Grid conversion operator UI
+#9 35.42 SNAP Collocation GUI
+#9 35.42 SNAP Collocation GUI
+#9 35.82 Optical Toolbox Radiometric Indices
+#9 35.82 Optical Toolbox Radiometric Indices
+#9 36.23 Optical Toolbox Biophysical Product Processor
+#9 36.23 Optical Toolbox Biophysical Product Processor
+#9 36.64 Optical Toolbox Biophysical Product Processor
+#9 36.64 Optical Toolbox Biophysical Product Processor
+#9 37.04 Optical Toolbox Biophysical Product Processor
+#9 37.04 Optical Toolbox Biophysical Product Processor
+#9 37.44 Optical Toolbox Biophysical Product Processor
+#9 37.44 Optical Toolbox Biophysical Product Processor
+#9 37.84 Optical Toolbox Biophysical Product Processor
+#9 37.84 Optical Toolbox Biophysical Product Processor
+#9 38.25 Optical Toolbox Forest Cover Change
+#9 38.25 Optical Toolbox Forest Cover Change
+#9 38.65 Optical Toolbox Forest Cover Change
+#9 38.65 Optical Toolbox Forest Cover Change
+#9 39.05 Case 2 Regional / CoastColour Processor Operator
+#9 39.05 Case 2 Regional / CoastColour Processor Operator
+#9 39.45 Optical Toolbox Spectral Angle Mapper
+#9 39.45 Optical Toolbox Spectral Angle Mapper
+#9 39.86 PROBA-V Product Reader
+#9 39.86 PROBA-V Product Reader
+#9 40.27 NASA Blue Marble Worldmap
+#9 40.27 NASA Blue Marble Worldmap
+#9 40.67 NASA Blue Marble Worldmap
+#9 40.67 NASA Blue Marble Worldmap
+#9 41.07 SNAP Help
+#9 41.07 SNAP Help
+#9 41.48 SNAP Help
+#9 41.48 SNAP Help
+#9 41.88 SNAP Product Library UI v2
+#9 41.88 SNAP Product Library UI v2
+#9 50.00 OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+#9 50.10 WARNING: package com.sun.java.swing.plaf.windows not in java.desktop
+#9 68.40 OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+#9 68.52 WARNING: package com.sun.java.swing.plaf.windows not in java.desktop
+#9 74.89 Updates not found.
+#9 74.89 updates=0
+#9 74.90 WARNING: A terminally deprecated method in java.lang.System has been called
+#9 74.90 WARNING: System::setSecurityManager has been called by org.netbeans.TopSecurityManager (file:/opt/esa-snap/platform/lib/boot.jar)
+#9 74.90 WARNING: Please consider reporting this to the maintainers of org.netbeans.TopSecurityManager
+#9 74.90 WARNING: System::setSecurityManager will be removed in a future release
+#9 DONE 108.3s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 13.9s done
+#10 writing image sha256:42e1879c95d045c56c3b18045783bf6dd0894db1668c45744fe8d50d364f7651
+#10 writing image sha256:42e1879c95d045c56c3b18045783bf6dd0894db1668c45744fe8d50d364f7651 0.4s done
+#10 naming to docker.io/library/snap14:1 0.0s done
+#10 DONE 14.4s

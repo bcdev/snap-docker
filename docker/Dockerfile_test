@@ -1,0 +1,67 @@
+# Copy this file into 'Dockerfile' to build an image with Ububntu + SNAP + Python installation + Snappy configured
+
+# Build the image for Ububntu + SNAP:
+## sudo docker build --build-arg snap_version=<snap_version> --no-cache --tag <tag> . &> <logfile
+## sudo docker build --build-arg snap_version=14 --no-cache --tag snap14:1 . &> build_docker_snap.log
+# or Ububntu + SNAP + Python installation + Snappy configured:
+## sudo docker build --target image-include-python --build-arg snap_version=<snap_version> --no-cache --tag <tag> . &> <logfile
+## sudo docker build --target image-include-python --build-arg snap_version=14 --no-cache --tag snap14_python:1 . &> build_docker_snap.log
+
+# Run the image for SNAP without Python:
+## sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
+## or with Python:
+# docker run --rm -p 8888:8888 docker_snap_python:1
+#
+
+
+# install Ubuntu...
+FROM mambaorg/micromamba:ubuntu26.04 as base
+
+# target 'image-snap', needed for build with/without Python...
+FROM base as image-snap
+
+WORKDIR /home/mambauser
+
+USER root
+
+RUN echo "Image generation for with/without Python..."
+
+ARG snap_version
+RUN echo "SNAP version: ${snap_version}"
+
+# install some extensions, set user to root for next steps...
+RUN apt-get -qq update && apt-get -qq install -y curl xauth x11-apps libxtst6 libxxf86vm1
+
+# download and install SNAP...
+RUN curl -O \
+    https://download.esa.int/step/snap/${snap_version}.0/installers/esa-snap_all_linux-${snap_version}.0.0.sh && \
+    sh esa-snap_all_linux-${snap_version}.0.0.sh -q && \
+    rm esa-snap_all_linux-${snap_version}.0.0.sh
+
+# check for SNAP module updates...
+RUN /opt/esa-snap/bin/snap --nosplash --nogui --modules --list --refresh
+RUN /opt/esa-snap/bin/snap --nosplash --nogui --modules --update-all
+
+# target 'image-snap-python', only needed for build with Python...
+# note that 'docker build --target <target>' specifies the LAST target in the Dockerfile which is included in the build.
+# Thus, to skip the Python part, call 'docker build --target image-snap ...'   
+FROM base as image-snap-python
+
+# install Python (micromamba)...
+RUN echo "image generation for Python part..."
+
+COPY --from=image-snap /home/mambauser .
+
+COPY --chown=$MAMBA_USER:$MAMBA_USER env.yaml /tmp/env.yaml
+RUN micromamba install -y -n base -f /tmp/env.yaml && \
+    micromamba clean --all --yes
+ARG MAMBA_DOCKERFILE_ACTIVATE=1
+
+# configure esa-snappy...
+RUN /opt/esa-snap/bin/snappy-conf /opt/conda/bin/python
+
+# set user back to mambauser...
+USER $MAMBA_USER
+
+# start Jupyter server at container startup...
+CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser"]
