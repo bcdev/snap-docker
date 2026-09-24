@@ -4,6 +4,7 @@
 
 # Build the image with:
 #   > docker build -f ./Dockerfile_snap14_python --no-cache --tag snap14_python:1 .
+#  Make sure that esa-snappy dependency has been set to latest version in env.yaml.
 
 # Run the image with:
 #   > docker run --rm -p 8888:8888 snap14_python:1
