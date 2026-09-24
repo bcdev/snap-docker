@@ -1,11 +1,28 @@
-# Copy this file into 'Dockerfile' to build an image with Ububntu + SNAP + Python installation + Snappy configured
+# ########################################################################################
+
+# Dockerfile to build an image with Ububntu + SNAP + Python installation + Snappy configured
+
+# Build the image with:
+#   > docker build -f ./Dockerfile_snap14_python --no-cache --tag snap14_python:1 .
 
 # Run the image with:
-# docker run --rm -p 8888:8888 docker_snap_python:1
-#
+#   > docker run --rm -p 8888:8888 snap14_python:1
+
+# Deploy the container (quay.io login with bcdev-2 credentials):
+#   > docker ps
+#   > docker login
+#   > docker commit <CONTAINER ID> quay.io/bcdev/snap14_python
+#   > docker push quay.io/bcdev/snap14_python
+
+# Executed on BC wvcci_vm (Ubuntu 22.04, Docker v24.0.2)
+
+# TODO: pass SNAP version (here 14) as parameter; test migration to CIQA
+
+# ########################################################################################
+
 
 # install Ubuntu...
-FROM mambaorg/micromamba:ubuntu26.04
+FROM mambaorg/micromamba:ubuntu24.04
 
 WORKDIR /home/mambauser
 

@@ -1,17 +1,5 @@
-# Copy this file into 'Dockerfile' to build an image with Ububntu + SNAP + Python installation + Snappy configured
-
-# Build the image for Ububntu + SNAP:
-## sudo docker build --build-arg snap_version=<snap_version> --no-cache --tag <tag> . &> <logfile
-## sudo docker build --build-arg snap_version=14 --no-cache --tag snap14:1 . &> build_docker_snap.log
-# or Ububntu + SNAP + Python installation + Snappy configured:
-## sudo docker build --target image-include-python --build-arg snap_version=<snap_version> --no-cache --tag <tag> . &> <logfile
-## sudo docker build --target image-include-python --build-arg snap_version=14 --no-cache --tag snap14_python:1 . &> build_docker_snap.log
-
-# Run the image for SNAP without Python:
-## sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap:1
-## or with Python:
-# docker run --rm -p 8888:8888 docker_snap_python:1
-#
+# Dockerfile to build an image with Ububntu + SNAP + Python installation + Snappy configured
+# Test version for improvements
 
 
 # install Ubuntu...

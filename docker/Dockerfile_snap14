@@ -1,14 +1,32 @@
-# Copy this file into 'Dockerfile' to build an image with Ububntu + SNAP (no Python installation, no Snappy configuration)
+# ########################################################################################
+
+# Dockerfile to build an image with Ububntu + SNAP (no Python installation, no Snappy configuration)
 # The image provides the capability to start the SNAP Desktop GUI within the Docker container.
 # Currently known limitations:
 # - Worldwind functionality not yet supported due to native library issues. 
 
+# Build the image with:
+#   > docker build -f ./Dockerfile_snap14 --no-cache --tag snap14:1 .
+
 # Run the image with:
 # - make sure that .Xauthority file exists and is provided as environment variable :
-# export XAUTHORITY=$HOME/.Xauthority
-# - then start the container:
-# sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority docker_snap_python:1
-# 
+#   > xhost +local:docker
+#   > export XAUTHORITY=$HOME/.Xauthority
+#   > sudo docker run --rm -ti --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+#          -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority snap14:1
+
+# Deploy the container (quay.io login with bcdev-2 credentials):
+#   > docker ps
+#   > docker login
+#   > docker commit <CONTAINER ID> quay.io/bcdev/snap14_python
+#   > docker push quay.io/bcdev/snap14_python
+
+# Executed on BC wvcci_vm (Ubuntu 22.04, Docker v24.0.2)
+
+# TODO: pass SNAP version (here 14) as parameter; test migration to CIQA
+
+# ########################################################################################
+
 
 # install Ubuntu...
 FROM mambaorg/micromamba:ubuntu26.04
